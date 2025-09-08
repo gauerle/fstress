@@ -2048,9 +2048,41 @@ body {
 }
 
 
-/* Fix bold text in note body */
+/* Force normal font weight everywhere */
+:root {
+  --bold-weight: 400 !important;
+  --font-weight: 400 !important;
+  --bold-modifier: 0 !important;
+}
+
+body,
+.page article,
+.content-container .content,
 .page article p,
 .page article li,
+.page article ul,
+.page article ol,
+.page article td,
+.page article div,
+article.popover-hint,
+.popover-inner {
+  font-weight: 400 !important;
+}
+
+/* Keep actual bold tags bold */
+.page article p > strong,
+strong,
+b {
+  font-weight: 600 !important;
+}
+
+/* Fix graph font */
+.graph-view text,
+#graph-display text,
+svg text {
+  font-family: "iA Writer Quattro S", var(--font-text-theme) !important;
+  font-weight: 400 !important;
+}.page article li,
 .page article td,
 .content-container .content,
 article.popover-hint {
