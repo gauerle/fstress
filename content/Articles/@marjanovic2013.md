@@ -57,7 +57,7 @@ tags:
 
 
 > [!quote]- marjanovic2013 - [p. 2](zotero://open-pdf/library/items/ULVHJUDT?page=2&annotation=39KE3JDL)
-> ccording to the transactional model of stress, stressors are first assessed as to their significance or threat level (Lazarus & Folkman, 1984). Largely, this primary appraisal process involves estimating the harm a stressor has already had or is likely to cause in the future. In general, the greater the harm estimated, the greater the stressor is perceived as being threatening. After levels of a stressor’s threat have been appraised, a secondary appraisal process ensues that evaluates potential approaches one has for coping with threats.
+> According to the transactional model of stress, stressors are first assessed as to their significance or threat level (Lazarus & Folkman, 1984). Largely, this primary appraisal process involves estimating the harm a stressor has already had or is likely to cause in the future. In general, the greater the harm estimated, the greater the stressor is perceived as being threatening. After levels of a stressor’s threat have been appraised, a secondary appraisal process ensues that evaluates potential approaches one has for coping with threats.
 
 
 
