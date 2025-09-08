@@ -2049,15 +2049,16 @@ body {
 
 
 /* Fix bold text in note body */
-.content-container .content {
-  font-weight: normal !important;
-}
-
+.page article p,
+.page article li,
+.page article td,
+.content-container .content,
 article.popover-hint {
   font-weight: 400 !important;
 }
 
-/* Fix graph view font */
-.graph-view text {
-  font-family: var(--bodyFont) !important;
+/* Fix graph view font - use the theme font */
+.graph-view text,
+#graph-display text {
+  font-family: "iA Writer Quattro S", var(--font-text-theme) !important;
 }
