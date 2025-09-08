@@ -1,0 +1,3 @@
+Explained the processes through which families respond to stressful events and the resulting outcomes. The model has 4 components: stressor event (A), resources (B), perception (C), and crisis (X). Stressor events induce a change in a family state, either positively or negatively. The degree to which a family is able to adapt is influenced by their resources (financial, educational, health, psychological, bonds, school) and their perception of the stressor. A crisis occur when a family is unable to adapt positively to the stressor, disrupting physical and psychological well-being.
+
+Posited by Reuben Hill, in 1949.
