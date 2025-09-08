@@ -282,7 +282,7 @@ html[saved-theme="light"] {
 @font-face {
   font-family: "iA Writer Quattro S";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   src:
     local("iA Writer Quattro S"),
     url("https://fonts.cdnfonts.com/s/63136/iAWriterQuattroSBold.woff")
@@ -291,7 +291,7 @@ html[saved-theme="light"] {
 @font-face {
   font-family: "iA Writer Quattro S";
   font-style: italic;
-  font-weight: 400;
+  font-weight: 700;
   src:
     local("iA Writer Quattro S"),
     url("https://fonts.cdnfonts.com/s/63136/iAWriterQuattroSBoldItalic.woff")
@@ -2048,49 +2048,3 @@ body {
 }
 
 
-/* Force normal font weight everywhere */
-:root {
-  --bold-weight: 400 !important;
-  --font-weight: 400 !important;
-  --bold-modifier: 0 !important;
-}
-
-body,
-.page article,
-.content-container .content,
-.page article p,
-.page article li,
-.page article ul,
-.page article ol,
-.page article td,
-.page article div,
-article.popover-hint,
-.popover-inner {
-  font-weight: 400 !important;
-}
-
-/* Keep actual bold tags bold */
-.page article p > strong,
-strong,
-b {
-  font-weight: 600 !important;
-}
-
-/* Fix graph font */
-.graph-view text,
-#graph-display text,
-svg text {
-  font-family: "iA Writer Quattro S", var(--font-text-theme) !important;
-  font-weight: 400 !important;
-}.page article li,
-.page article td,
-.content-container .content,
-article.popover-hint {
-  font-weight: 400 !important;
-}
-
-/* Fix graph view font - use the theme font */
-.graph-view text,
-#graph-display text {
-  font-family: "iA Writer Quattro S", var(--font-text-theme) !important;
-}
