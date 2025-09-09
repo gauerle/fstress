@@ -33,7 +33,7 @@ tags:
 - Frequently defined through indicators of perceived economic pressure ([[@parthasarathy2025]])
 - Feeling stressed about personal finances in general ([[@heckman2014]])
 - Represents the strain in a household associated with either a lack of financial resources (hardship problems) or an inability to manage the available resources (cashflow problems) ([[@breunig2019]])
-- Combination of physical arousal and emotional responses influenced by financial stimuli such as urgent payment [[@grable2014]]
+- Combination of physical arousal and emotional responses influenced by financial stimuli such as urgent payment [[@grable2015]]
 - Emotional reaction to present financial circumstances that may not be solved only by financial counseling or financial coaching ([[@lopezalvarado2021]])
 - Persistent inability to afford the basic necessities of life [[@aslund2014]]
 - Problems that arise when a person is faced with the threat of a shortage of money in combination with a lack of cash reserves and difficulties making ends meet ([[@starrin2009]])

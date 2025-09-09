@@ -7,6 +7,24 @@ import { FilePath, FullSlug, getFileExtension, slugifyFilePath, slugTag } from "
 import { QuartzPluginData } from "../vfile"
 import { i18n } from "../../i18n"
 
+function processWikilinks(value: any, allSlugs: FullSlug[]): any {
+  if (typeof value === 'string') {
+    return value.replace(/\[\[([^\]]+)\]\]/g, (match, link) => {
+      const slug = slugifyFilePath((link + ".md") as FilePath)
+      return `<a href="/${slug}">${link}</a>`
+    })
+  } else if (Array.isArray(value)) {
+    return value.map(item => processWikilinks(item, allSlugs))
+  } else if (value && typeof value === 'object') {
+    const processed: any = {}
+    for (const key in value) {
+      processed[key] = processWikilinks(value[key], allSlugs)
+    }
+    return processed
+  }
+  return value
+}
+
 export interface Options {
   delimiters: string | [string, string]
   language: "yaml" | "toml"
@@ -121,6 +139,13 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             // Remove duplicate slugs
             const uniqueSlugs = [...new Set(allSlugs)]
             allSlugs.splice(0, allSlugs.length, ...uniqueSlugs)
+
+            // Process wikilinks in all frontmatter properties
+            for (const key in data) {
+              if (key !== 'title' && key !== 'tags' && key !== 'aliases') {
+                data[key] = processWikilinks(data[key], allSlugs)
+              }
+            }
 
             // fill in frontmatter
             file.data.frontmatter = data as QuartzPluginData["frontmatter"]

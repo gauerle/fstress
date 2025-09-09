@@ -1,4 +1,90 @@
 @use "./base.scss";
 @use "themes";
 
-// put your custom CSS here!
+.properties-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;  // Add bottom margin
+  padding: 0;  // Remove padding
+  background: transparent;  // Remove background
+  
+  summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;  // Move padding to summary only
+    
+    &::marker {
+      color: var(--text-muted);
+    }
+  }
+}
+
+.research-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--background-primary-alt);
+  border-radius: var(--radius-s);
+  padding: 2px;  // Small padding to contain the gap
+}
+
+.metadata-property {
+  display: flex;
+  border-radius: var(--radius-s);
+  overflow: hidden;
+  min-height: 28px;
+  transition: box-shadow .15s ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 0 0 1px var(--background-modifier-border-hover);
+  }
+  
+  dt {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.375rem 0.5rem;
+    background-color: var(--background-primary-alt);
+    color: var(--text-muted);
+    min-width: 120px;
+    border-bottom: 1px solid var(--background-modifier-border);
+  }
+  
+  dd {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0.375rem 0.5rem;
+    color: var(--text-normal);
+    border-bottom: 1px solid var(--background-modifier-border);
+  }
+}
+
+
+.property-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: var(--text-muted);
+  
+  &.property-tags {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='M9 5H2v7l6.29 6.29c.94.94 2.48.94 3.42 0l3.58-3.58c.94-.94.94-2.48 0-3.42L9 5Z'/%3E%3Cpath d='M6 9.01V9'/%3E%3Cpath d='m15 5 6.3 6.3a2.4 2.4 0 0 1 0 3.4L17 19'/%3E%3C/svg%3E");
+  }
+  
+  &.property-number {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Crect x='14' y='14' width='4' height='6' rx='2'/%3E%3Crect x='6' y='4' width='4' height='6' rx='2'/%3E%3Cpath d='M6 20h4'/%3E%3Cpath d='M14 10h4'/%3E%3Cpath d='M6 14h2v6'/%3E%3Cpath d='M14 4h2v6'/%3E%3C/svg%3E");
+  }
+  
+  &.property-list {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cline x1='8' x2='21' y1='6' y2='6'/%3E%3Cline x1='8' x2='21' y1='12' y2='12'/%3E%3Cline x1='8' x2='21' y1='18' y2='18'/%3E%3Cline x1='3' x2='3.01' y1='6' y2='6'/%3E%3Cline x1='3' x2='3.01' y1='12' y2='12'/%3E%3Cline x1='3' x2='3.01' y1='18' y2='18'/%3E%3C/svg%3E");
+  }
+  
+  &.property-text {
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cline x1='3' x2='21' y1='6' y2='6'/%3E%3Cline x1='3' x2='15' y1='12' y2='12'/%3E%3Cline x1='3' x2='21' y1='18' y2='18'/%3E%3C/svg%3E");
+  }
+}
+
+.tags:not(.property-tags-list) {
+  display: none;
+}

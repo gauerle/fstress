@@ -143,7 +143,7 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     if (showTags) tags.forEach((tag) => neighbourhood.add(tag))
   }
 const nodes = [...neighbourhood].map((url) => {
-  const text = url.startsWith("tags/") ? "#" + url.substring(5) : url
+  const text = url.startsWith("tags/") ? "#" + url.substring(5) : url.split("/").pop() || url
   return {
     id: url,
     text,
@@ -183,6 +183,7 @@ const nodes = [...neighbourhood].map((url) => {
     "--dark",
     "--darkgray",
     "--bodyFont",
+    "--font-text-theme",
   ] as const
   const computedStyleMap = cssVars.reduce(
     (acc, key) => {
@@ -195,9 +196,32 @@ const nodes = [...neighbourhood].map((url) => {
   // calculate color
   const color = (d: NodeData) => {
     const isCurrent = d.id === slug
+    
+    // Current node gets special color
     if (isCurrent) {
       return computedStyleMap["--secondary"]
-    } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
+    }
+    
+    // Tag-based colors for regular nodes
+    if (d.tags && d.tags.length > 0) {
+      // Use first tag for color
+      const firstTag = d.tags[0].toLowerCase()
+      
+      // Define tag colors
+      const tagColors: Record<string, string> = {
+        'source': '#8B5CF6', 
+        'scale': '#3B82F6',     
+        'theory': '#F59E0B', 
+        'term': '#e6287b',
+      }
+      
+      if (tagColors[firstTag]) {
+        return tagColors[firstTag]
+      }
+    }
+    
+    // Default colors for visited/unvisited
+    if (visited.has(d.id) || d.id.startsWith("tags/")) {
       return computedStyleMap["--tertiary"]
     } else {
       return computedStyleMap["--gray"]
@@ -357,7 +381,7 @@ const nodes = [...neighbourhood].map((url) => {
     autoDensity: true,
     backgroundAlpha: 0,
     preference: "webgpu",
-    resolution: window.devicePixelRatio,
+    resolution: window.devicePixelRatio * 2,
     eventMode: "static",
   })
   graph.appendChild(app.canvas)
@@ -382,7 +406,7 @@ const nodes = [...neighbourhood].map((url) => {
       style: {
         fontSize: fontSize * 15,
         fill: computedStyleMap["--dark"],
-        fontFamily: computedStyleMap["--bodyFont"],
+        fontFamily: "iA Writer Quattro S, " + computedStyleMap["--bodyFont"],
       },
       resolution: window.devicePixelRatio * 4,
     })
