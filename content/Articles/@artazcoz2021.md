@@ -39,7 +39,8 @@ countries:
 theories:
 analyses:
   - multiple regression
-scales: ""
+scales:
+  - "[[WHO-5]]"
 hypotheses:
 keyfindings:
   - Financial strain was associated with poor self-perceived health status and poor psychological well-being
@@ -100,11 +101,7 @@ tags:
 
 
 
-> [!quote]- artazcoz2021 - [p. 3](zotero://open-pdf/library/items/DM8PH9ZV?page=3&annotation=C8BHVBT5)
-> WHO-5
 
-> 
-> **Note:** #scale
 
 
 

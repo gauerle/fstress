@@ -122,8 +122,8 @@ button.desktop-explorer {
 
     // Style for TOP-LEVEL file links (not nested)
     & > li > a {
-      color: var(--dark);
-      opacity: 0.9;
+      color: #B5A993;
+      opacity: 1;
       pointer-events: all;
       display: inline-block; // Keep inline-block for top-level items
       padding: 4px 8px;
@@ -164,7 +164,7 @@ button.desktop-explorer {
       &.active {
         opacity: 1;
         color: #655799; // Purple for active
-        font-weight: 500;
+        font-weight: 600;
         
         &::before {
           opacity: 1;
@@ -277,7 +277,7 @@ button.desktop-explorer {
 
   // Folder button styling (when folderClickBehavior is "collapse")
   & div > button {
-    color: #786F61; // Explicit color for button
+    color: rgba(196, 184, 160, 1); // Explicit color for button
     background-color: transparent;
     border: none;
     text-align: left;
@@ -303,7 +303,6 @@ button.desktop-explorer {
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: rgba(101, 87, 153, 0.1);
       border-radius: 4px;
       z-index: -1;
       opacity: 0;
@@ -316,15 +315,14 @@ button.desktop-explorer {
       }
       
       & span {
-        color: #655799; // Purple on hover
+        font-weight: $semiBoldWeight!important
       }
     }
 
     & span {
-      font-size: 1rem; // Same size as body text
+      font-size: 15px!important; // Same size as body text
       display: inline-block;
-      color: #786F61; // Brownish gray for folder text - matches icon
-      font-weight: $semiBoldWeight;
+      color: rgba(196, 184, 160, 1)!important; 
       margin: 0;
       line-height: 1.5rem;
       pointer-events: none;
