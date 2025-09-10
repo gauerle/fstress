@@ -96,7 +96,7 @@ html[saved-theme="dark"] {
     --text-normal: #c5b8a1;
     --text-muted: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 45%));
     --text-faint: hsl(var(--base-h), var(--base-s), calc(var(--base-d) + 47%));
-    --text-highlight-bg: #ffb150;
+    --text-highlight-bg: color-mix(in srgb, var(--text-a, var(--link-color)), #0000 85%);
     --interactive-accent: hsl(
       var(--theme-accent-h),
       var(--theme-accent-s),
@@ -107,9 +107,9 @@ html[saved-theme="dark"] {
       var(--theme-accent-s),
       calc(var(--theme-accent-l))
     );
-    --scrollbar-active-thumb-bg: #ffffff;
-    --scrollbar-bg: #ffffff;
-    --scrollbar-thumb-bg: #ffffff;
+    --scrollbar-active-thumb-bg: color-mix(in srgb, var(--h3-color) 60%, transparent) transparent;;
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb-bg: color-mix(in srgb, var(--h3-color) 40%, transparent) transparent;
     --highlight-mix-blend-mode: darken;
   }
 }
@@ -1559,12 +1559,6 @@ body {
 
           font-size: 1rem;
           &.active,
-          &:not(.folder-title):hover {
-            font-size: 1rem;
-            line-height: 1.5rem;
-
-            border-radius: 0.25rem;
-          }
           &[data-for$="/index"] {
             padding-inline-start: 0.5rem;
             padding-inline-end: 0;

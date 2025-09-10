@@ -209,7 +209,7 @@ const nodes = [...neighbourhood].map((url) => {
       
       // Define tag colors
       const tagColors: Record<string, string> = {
-        'source': '#8B5CF6', 
+        'source': '#5dce90ff', 
         'scale': '#3B82F6',     
         'theory': '#F59E0B', 
         'term': '#e6287b',

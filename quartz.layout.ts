@@ -38,7 +38,11 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      folderClickBehavior: "collapse", // Both text and icon toggle folders
+      folderDefaultState: "collapsed",
+      useSavedState: true, // Remember which folders were open/closed
+    }),
   ],
   right: [
     Component.Graph(),
@@ -62,7 +66,11 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      folderClickBehavior: "collapse", // Both text and icon toggle folders
+      folderDefaultState: "collapsed",
+      useSavedState: true, // Remember which folders were open/closed
+    }),
   ],
   right: [],
 }

@@ -7,10 +7,10 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Quartz 4",
-    pageTitleSuffix: "",
+    pageTitle: "Gauerle",
+    pageTitleSuffix: "Review",
     enableSPA: true,
-    enablePopovers: true,
+    enablePopovers: false,
     analytics: {
       provider: "plausible",
     },
@@ -31,26 +31,27 @@ const config: QuartzConfig = {
           light: "#faf8f8",
           lightgray: "#e5e5e5",
           gray: "#b8b8b8",
-          darkgray: "#4e4e4e",
-          dark: "#2b2b2b",
-          secondary: "#284b63",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#fff23688",
+          darkgray: "#575057",  // Your medium purple-gray
+          dark: "#262626",      // Your dark gray
+          secondary: "#655799", // Your purple
+          tertiary: "#786F61",  // Your brownish gray
+          highlight: "rgba(181, 169, 147, 0.15)", // Tan highlight
+          textHighlight: "#B5A99388", // Tan with transparency
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
-          darkgray: "#d4d4d4",
+          light: "#242424",     // Your darkest gray
+          lightgray: "#343134", // Your dark gray
+          gray: "#575057",      // Your medium purple-gray
+          darkgray: "#c5b8a1",  // Your tan
           dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
-          highlight: "rgba(143, 159, 169, 0.15)",
-          textHighlight: "#b3aa0288",
+          secondary: "#a386f9", // Your purple
+          tertiary: "#B5A993",  // Your tan
+          highlight: "rgba(101, 87, 153, 0.15)", // Purple highlight for dark mode
+          textHighlight: "#65579955", // Purple with transparency
         },
       },
     },
+    
   },
   plugins: {
     transformers: [
@@ -65,12 +66,19 @@ const config: QuartzConfig = {
         },
         keepBackground: false,
       }),
-      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: false }),
+      Plugin.ObsidianFlavoredMarkdown({ enableInHtmlEmbed: true }),
       Plugin.GitHubFlavoredMarkdown(),
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
       Plugin.Latex({ renderEngine: "katex" }),
+      Plugin.CrawlLinks({
+        markdownLinkResolution: "shortest", // or "absolute" or "relative"
+        prettyLinks: true,
+        openLinksInNewTab: false,
+        lazyLoad: true,
+        externalLinkIcon: true,
+      }),
     ],
     filters: [Plugin.RemoveDrafts()],
     emitters: [

@@ -33,13 +33,13 @@
     display: none;
   }
   & > .nightIcon {
-    display: inline;
+    display: none;
   }
 }
 
 :root .darkmode {
   & > .dayIcon {
-    display: inline;
+    display: none;
   }
   & > .nightIcon {
     display: none;

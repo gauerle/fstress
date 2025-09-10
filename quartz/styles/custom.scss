@@ -3,19 +3,47 @@
 
 .properties-section {
   margin-top: 1rem;
-  margin-bottom: 1rem;  // Add bottom margin
-  padding: 0;  // Remove padding
-  background: transparent;  // Remove background
+  margin-bottom: 1rem;
+  padding: 0;
+  background: transparent;
   
   summary {
     cursor: pointer;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    padding: 0.75rem;  // Move padding to summary only
+    padding: 0.75rem;
+    padding-left: 2rem; // Make room for the chevron
+    position: relative;
+    list-style: none; // Hide default marker
     
-    &::marker {
-      color: var(--text-muted);
+    // Hide default marker for webkit browsers
+    &::-webkit-details-marker {
+      display: none;
     }
+    
+    // Add custom chevron
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--text-muted);
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E");
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E");
+      mask-size: contain;
+      -webkit-mask-size: contain;
+      mask-repeat: no-repeat;
+      -webkit-mask-repeat: no-repeat;
+      transition: transform 0.2s ease;
+    }
+  }
+  
+  // Rotate chevron when details is open
+  &[open] summary::before {
+    transform: translateY(-50%) rotate(90deg);
   }
 }
 
@@ -88,3 +116,137 @@
 .tags:not(.property-tags-list) {
   display: none;
 }
+
+.explorer {
+  .explorer-content {
+    font-size: 15px;
+    // Remove default folder icons
+    .folder-container {
+      &:before {
+        background: none !important;
+        mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E") !important;
+        -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E") !important;
+        background: var(--text-muted) !important;
+        transition: transform 0.1s ease-in-out;
+      }
+    }
+
+    // Rotate chevron when folder is open
+    li:has(> .folder-outer.open) > .folder-container:before {
+      transform: rotate(90deg);
+    }
+
+    // Replace file icons with chevrons
+    ul.explorer-ul li > a:before {
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E") !important;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E") !important;
+      background: var(--text-muted) !important;
+      opacity: 0; // Hide chevrons for files
+    }
+    // Hover and selection effects
+    ul.explorer-ul li {
+      a, .folder-container {
+        border-radius: var(--radius-s);
+        transition: background-color 0.15s ease;
+
+        &:hover {
+          background-color: rgba(196, 184, 160, 0.3);
+        }
+
+        &.active, &[aria-current="true"] {
+          background-color:  rgba(196, 184, 160, 0.3);
+          color:  rgba(196, 184, 160, 1);
+          padding-left: 2.5rem!important;
+        }
+      }
+
+      // Text wrapping for long filenames
+      a {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;  /* change to desired number of lines */
+        overflow: hidden;
+        line-height: 1.0;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        font-size: 15px;
+      }
+
+      a:not(.active):not([aria-current="true"]) {
+        padding-left: 2rem!important; /* Adjust value as needed */
+      }
+    }
+  }
+
+&::-webkit-scrollbar {
+  width: 6px;  // Don't forget to set width
+  background-color: transparent;
+}
+
+&::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+&::-webkit-scrollbar-thumb {
+  background-color: color-mix(in srgb, var(--h3-color) 40%, transparent);  // Single semicolon
+  border-radius: var(--radius-l);
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--h3-color) 60%, transparent);  // Single semicolon
+  }
+}
+
+ul.content {
+  position: relative!important; /* Needed for absolute positioning of the pseudo-element */
+  /* Keep your existing width and other styles */
+  width: 244px!important; /* Or width: 100%; as set before */
+}
+
+ul.content::before {
+  content: ''!important;
+  position: absolute!important;
+  left: 0.40rem!important; /* Adjust this value to displace the line horizontally */
+  top: 0!important;
+  bottom: 0!important; /* Or height: 100%; */
+  width: 1px!important; /* Adjust for line thickness */
+  background-color: rgba(196, 184, 160, 0.3)!important; /* Set your desired line color */
+  /* Optional: z-index if the line needs to be above or below other content */
+  /* z-index: 1; */
+}
+
+// For Firefox - these go INSIDE the scrollable container selector
+scrollbar-width: thin;
+scrollbar-color: color-mix(in srgb, var(--h3-color) 40%, transparent) transparent;  // TWO colors needed
+}
+
+// Add CSS variables if not defined
+:root {
+  --nav-item-background-hover: var(--background-modifier-hover);
+  --nav-item-background-selected: hsla(var(--interactive-accent-hsl), 0.1);
+  --nav-item-color-selected: var(--text-normal);
+  --nav-item-weight-active: var(--font-medium);
+}
+
+.darkmode, 
+.readermode {
+  display: none !important;
+}
+
+body .explorer .explorer-content ul.explorer-ul li a { /* the element was a */
+  width: 100%!important;
+  box-sizing: border-box;
+}
+
+/* related resource: index.css:1:78593 */
+body .explorer .explorer-content ul.explorer-ul li { /* the element was li */
+  width: 100%!important;
+  box-sizing: border-box;
+}
+
+/* related resource: index.css:1:78229 */
+body .explorer .explorer-content .folder-outer>ul.content { /* the element was ul.content */
+  width: 100%!important;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+

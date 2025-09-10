@@ -61,22 +61,22 @@
   }
 
   button.desktop-explorer {
-    display: flex;
+    display: none!important;
   }
 
   @media all and ($mobile) {
     button.mobile-explorer {
-      display: flex;
+      display: none!important;
     }
 
     button.desktop-explorer {
-      display: none;
+      display: none!important;
     }
   }
 
   &.desktop-only {
     @media all and not ($mobile) {
-      display: flex;
+      display: none!important;
     }
   }
 
@@ -103,7 +103,7 @@ button.desktop-explorer {
 
   & h2 {
     font-size: 1rem;
-    display: inline-block;
+    display: none!important;
     margin: 0;
   }
 }
@@ -112,7 +112,7 @@ button.desktop-explorer {
   list-style: none;
   overflow: hidden;
   overflow-y: auto;
-  margin-top: 0.5rem;
+  margin-top: 0;
 
   & ul {
     list-style: none;
@@ -120,14 +120,56 @@ button.desktop-explorer {
     padding: 0;
     overscroll-behavior: contain;
 
-    & li > a {
+    // Style for TOP-LEVEL file links (not nested)
+    & > li > a {
       color: var(--dark);
-      opacity: 0.75;
+      opacity: 0.9;
       pointer-events: all;
+      display: inline-block; // Keep inline-block for top-level items
+      padding: 4px 8px;
+      margin: 2px 0;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      position: relative; // Establish stacking context
+      z-index: 1; // Ensure text is above background
+      isolation: isolate; // Create new stacking context
+      font-size: 15px!important;
+      font-family: "??", "??", "iA Writer Quattro S", Arial!important;
+
+      // Background layer
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(101, 87, 153, 0.1); // Purple tint
+        border-radius: 4px;
+        z-index: -1; // Place behind text
+        opacity: 0; // Hidden by default
+        transition: opacity 0.2s ease;
+      }
+
+      &:hover {
+        opacity: 1;
+        color: #655799; // Purple accent
+        
+        &::before {
+          opacity: 1; // Show background on hover
+        }
+      }
 
       &.active {
         opacity: 1;
-        color: var(--tertiary);
+        color: #655799; // Purple for active
+        font-weight: 500;
+        
+        &::before {
+          opacity: 1;
+          background-color: rgba(101, 87, 153, 0.15); // Slightly stronger purple
+        }
       }
     }
   }
@@ -144,70 +186,178 @@ button.desktop-explorer {
 
   .folder-outer > ul {
     overflow: hidden;
-    margin-left: 6px;
-    padding-left: 0.8rem;
-    border-left: 1px solid var(--lightgray);
+    border-left: none!important;
+    
+    
+    // Style for items INSIDE folders (nested items)
+    & li > a {
+      color: #575057; // Different text color for nested items
+      opacity: 0.85;
+      font-size: 1rem;
+
+      font-size: 15px!important;
+      font-family: "??", "??", "iA Writer Quattro S", Arial!important;
+      
+      // Different background for nested items
+      &::before {
+        background-color: rgba(120, 111, 97, 0.08); // Brownish tint (#786F61 at 8%)
+      }
+      
+      &:hover {
+        color: #B5A993; // Tan color on hover for nested items
+        
+        &::before {
+          opacity: 1;
+          background-color: rgba(120, 111, 97, 0.12); // Stronger brownish tint on hover
+        }
+      }
+      
+      &.active {
+        color: #B5A993; // Tan for active nested item
+        font-weight: 500;
+        
+        &::before {
+          opacity: 1;
+          background-color: rgba(181, 169, 147, 0.2); // Tan background for active
+        }
+      }
+    }
   }
 }
 
+// Folder container
 .folder-container {
   flex-direction: row;
   display: flex;
   align-items: center;
   user-select: none;
+  
+  // Ensure no background color on the container itself
+  background-color: transparent !important;
 
+  // Folder link styling (when folderClickBehavior is "link")
   & div > a {
-    color: var(--secondary);
+    color: #786F61; // Brownish gray for folders - matches icon
     font-family: var(--headerFont);
-    font-size: 0.95rem;
+    font-size: 1rem; // Same size as body text
     font-weight: $semiBoldWeight;
     line-height: 1.5rem;
-    display: inline-block;
+    display: block!important;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(101, 87, 153, 0.1);
+      border-radius: 4px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover {
+      color: #655799; // Purple on hover
+      
+      &::before {
+        opacity: 1; // Show background on hover
+      }
+    }
   }
 
-  & div > a:hover {
-    color: var(--tertiary);
-  }
-
+  // Folder button styling (when folderClickBehavior is "collapse")
   & div > button {
-    color: var(--dark);
+    color: #786F61; // Explicit color for button
     background-color: transparent;
     border: none;
     text-align: left;
     cursor: pointer;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 4px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 4px;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     font-family: var(--headerFont);
+    transition: color 0.2s ease;
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(101, 87, 153, 0.1);
+      border-radius: 4px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1; // Show background on hover
+      }
+      
+      & span {
+        color: #655799; // Purple on hover
+      }
+    }
 
     & span {
-      font-size: 0.95rem;
+      font-size: 1rem; // Same size as body text
       display: inline-block;
-      color: var(--secondary);
+      color: #786F61; // Brownish gray for folder text - matches icon
       font-weight: $semiBoldWeight;
       margin: 0;
       line-height: 1.5rem;
       pointer-events: none;
+      transition: color 0.2s ease;
+      position: relative; // Ensure text is above background
+      z-index: 2;
     }
   }
 }
 
 .folder-icon {
   margin-right: 5px;
-  color: var(--secondary);
+  color: #655799; // Purple color for chevron (change this to any color you want)
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.2s ease;
   backface-visibility: visible;
   flex-shrink: 0;
+  pointer-events: all;
+  opacity: 0.8; // Slightly transparent by default
 }
 
 li:has(> .folder-outer:not(.open)) > .folder-container > svg {
   transform: rotate(-90deg);
 }
 
+// Ensure open folders don't get extra background
+li:has(> .folder-outer.open) > .folder-container {
+  background-color: transparent !important;
+}
+
 .folder-icon:hover {
-  color: var(--tertiary);
+  color: #B5A993; // Tan color on hover (or any color you prefer)
+  opacity: 1; // Full opacity on hover
 }
 
 .explorer {

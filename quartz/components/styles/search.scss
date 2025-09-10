@@ -1,242 +1,246 @@
 @use "../../styles/variables.scss" as *;
 
-.search {
-  min-width: fit-content;
-  max-width: 14rem;
-  @media all and ($mobile) {
-    flex-grow: 0.3;
-  }
-
-  & > .search-button {
-    background-color: color-mix(in srgb, var(--lightgray) 60%, var(--light));
-    border: none;
-    border-radius: 4px;
-    font-family: inherit;
-    font-size: inherit;
-    height: 2rem;
-    padding: 0;
+.search-inline-container {
+  width: 100%;
+  margin-bottom: 1rem;
+  
+  .search-header {
     display: flex;
     align-items: center;
-    text-align: inherit;
-    cursor: pointer;
-    white-space: nowrap;
-    width: 100%;
-    justify-content: space-between;
-
-    & > p {
-      display: inline;
-      padding: 0 1rem;
-    }
-
-    & svg {
-      cursor: pointer;
+    gap: 0.5rem;
+    background-color: color-mix(in srgb, var(--lightgray) 60%, var(--light));
+    border-radius: 4px;
+    padding: 0.3rem 0.5rem;
+    
+    .search-icon {
       width: 18px;
       min-width: 18px;
-      margin: 0 0.5rem;
-
+      opacity: 0.6;
+      
       .search-path {
         stroke: var(--darkgray);
         stroke-width: 2px;
-        transition: stroke 0.5s ease;
+      }
+    }
+    
+    .search-bar-inline {
+      flex: 1;
+      background: transparent;
+      border: none;
+      font-family: var(--bodyFont);
+      font-size: 0.95rem;
+      color: var(--dark);
+      outline: none;
+      
+      &::placeholder {
+        color: var(--gray);
+        opacity: 0.8;
       }
     }
   }
-
-  & > .search-container {
-    position: fixed;
-    contain: layout;
-    z-index: 999;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow-y: auto;
+  
+  .search-results-inline {
+    margin-top: 0.5rem;
+    background: var(--light);
+    border: 1px solid var(--lightgray);
+    border-radius: 4px;
+    max-height: 60vh;
+    overflow: hidden;
     display: none;
-    backdrop-filter: blur(4px);
-
-    &.active {
-      display: inline-block;
+    animation: slideDown 0.2s ease;
+    
+    // Custom scrollbar styles for the container
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: transparent;
     }
-
-    & > .search-space {
-      width: 65%;
-      margin-top: 12vh;
-      margin-left: auto;
-      margin-right: auto;
-
-      @media all and not ($desktop) {
-        width: 90%;
+    
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: color-mix(in srgb, var(--textHighlight) 40%, transparent);
+      border-radius: 3px;
+      
+      &:hover {
+        background: color-mix(in srgb, var(--textHighlight) 60%, transparent);
       }
-
-      & > * {
-        width: 100%;
-        border-radius: 7px;
-        background: var(--light);
-        box-shadow:
-          0 14px 50px rgba(27, 33, 48, 0.12),
-          0 10px 30px rgba(27, 33, 48, 0.16);
-        margin-bottom: 2em;
+    }
+    
+    // Firefox scrollbar
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--textHighlight) 40%, transparent) transparent;
+    
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
       }
-
-      & > input {
-        box-sizing: border-box;
-        padding: 0.5em 1em;
-        font-family: var(--bodyFont);
-        color: var(--dark);
-        font-size: 1.1em;
-        border: 1px solid var(--lightgray);
-
-        &:focus {
-          outline: none;
-        }
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
-
-      & > .search-layout {
-        display: none;
-        flex-direction: row;
-        border: 1px solid var(--lightgray);
-        flex: 0 0 100%;
-        box-sizing: border-box;
-
-        &.display-results {
-          display: flex;
-        }
-
-        &[data-preview] > .results-container {
-          flex: 0 0 min(30%, 450px);
-        }
-
+    }
+    
+    &[data-preview="true"] {
+      display: none;
+      
+      &:has(.results-list:not(:empty)) {
+        display: grid;
+        grid-template-columns: 1fr;
+        
         @media all and not ($mobile) {
-          &[data-preview] {
-            & .result-card > p.preview {
-              display: none;
-            }
-
-            & > div {
-              &:first-child {
-                border-right: 1px solid var(--lightgray);
-                border-top-right-radius: unset;
-                border-bottom-right-radius: unset;
-              }
-
-              &:last-child {
-                border-top-left-radius: unset;
-                border-bottom-left-radius: unset;
-              }
-            }
+          grid-template-columns: 1fr 1fr;
+          
+          .results-list {
+            border-right: 1px solid var(--lightgray);
           }
         }
-
-        & > div {
-          height: calc(75vh - 12vh);
-          border-radius: 5px;
+      }
+    }
+    
+    .results-list {
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 0.3rem 0;
+      
+      &:empty {
+        display: none;
+      }
+      
+      .result-card {
+        display: block;
+        padding: 0.7rem 1rem;
+        text-decoration: none;
+        color: var(--dark);
+        border-bottom: 1px solid var(--lightgray);
+        transition: background-color 0.2s ease;
+        cursor: pointer;
+        
+        &:last-child {
+          border-bottom: none;
         }
-
-        @media all and ($mobile) {
-          flex-direction: column;
-
-          & > .preview-container {
-            display: none !important;
+        
+        &:hover,
+        &.focus {
+          background-color: color-mix(in srgb, var(--lightgray) 30%, var(--light));
+        }
+        
+        .card-title {
+          margin: 0 0 0.3rem 0;
+          font-size: 1rem;
+          font-weight: 600;
+          line-height: 1.3;
+          
+          .highlight {
+            background: color-mix(in srgb, var(--tertiary) 60%, transparent);
+            border-radius: 2px;
+            padding: 0 2px;
           }
-
-          &[data-preview] > .results-container {
-            width: 100%;
-            height: auto;
-            flex: 0 0 100%;
-          }
         }
-
-        & .highlight {
-          background: color-mix(in srgb, var(--tertiary) 60%, rgba(255, 255, 255, 0));
-          border-radius: 5px;
-          scroll-margin-top: 2rem;
-        }
-
-        & > .preview-container {
-          flex-grow: 1;
-          display: block;
+        
+        .card-description {
+          margin: 0;
+          font-size: 0.85rem;
+          line-height: 1.4;
+          color: var(--gray);
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
           overflow: hidden;
-          font-family: inherit;
-          color: var(--dark);
-          line-height: 1.5em;
-          font-weight: $normalWeight;
-          overflow-y: auto;
-          padding: 0 2rem;
-
-          & .preview-inner {
-            margin: 0 auto;
-            width: min($pageWidth, 100%);
-          }
-
-          a[role="anchor"] {
-            background-color: transparent;
+          
+          .highlight {
+            background: color-mix(in srgb, var(--tertiary) 60%, transparent);
+            border-radius: 2px;
+            padding: 0 2px;
+            color: var(--dark);
           }
         }
-
-        & > .results-container {
-          overflow-y: auto;
-
-          & .result-card {
-            overflow: hidden;
-            padding: 1em;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            border-bottom: 1px solid var(--lightgray);
-            width: 100%;
-            display: block;
-            box-sizing: border-box;
-
-            // normalize card props
-            font-family: inherit;
-            font-size: 100%;
-            line-height: 1.15;
+        
+        ul.tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.3rem;
+          margin: 0.3rem 0 0 0;
+          padding: 0;
+          list-style: none;
+          
+          li p {
+            display: inline-block;
+            font-size: 0.75rem;
+            background-color: var(--highlight);
+            border-radius: 4px;
+            padding: 0.15rem 0.3rem;
             margin: 0;
-            text-transform: none;
-            text-align: left;
-            outline: none;
-            font-weight: inherit;
-
-            &:hover,
-            &:focus,
-            &.focus {
-              background: var(--lightgray);
-            }
-
-            & > h3 {
-              margin: 0;
-            }
-
-            @media all and not ($mobile) {
-              & > p.card-description {
-                display: none;
-              }
-            }
-
-            & > ul.tags {
-              margin-top: 0.45rem;
-              margin-bottom: 0;
-            }
-
-            & > ul > li > p {
-              border-radius: 8px;
-              background-color: var(--highlight);
-              padding: 0.2rem 0.4rem;
-              margin: 0 0.1rem;
-              line-height: 1.4rem;
-              font-weight: $boldWeight;
-              color: var(--secondary);
-
-              &.match-tag {
-                color: var(--tertiary);
-              }
-            }
-
-            & > p {
-              margin-bottom: 0;
+            color: var(--secondary);
+            
+            &.match-tag {
+              background-color: color-mix(in srgb, var(--tertiary) 20%, transparent);
+              color: var(--tertiary);
             }
           }
         }
+      }
+      
+      .no-results {
+        padding: 1rem;
+        text-align: center;
+        color: var(--gray);
+        
+        p {
+          margin: 0;
+          font-size: 0.9rem;
+        }
+      }
+    }
+    
+    .preview-pane {
+      max-height: 60vh;
+      overflow-y: auto;
+      padding: 1rem;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      
+      @media all and ($mobile) {
+        display: none !important;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      p {
+        margin: 0.5rem 0;
+      }
+      
+      .highlight {
+        background: color-mix(in srgb, var(--tertiary) 60%, transparent);
+        border-radius: 3px;
+        padding: 1px 3px;
+      }
+      
+      // Reduce size of content in preview
+      * {
+        font-size: 0.9em;
       }
     }
   }
+}
+
+// Remove old search styles if they exist
+.search {
+  display: none;
+}
+
+// Ensure the explorer gets pushed down when results are shown
+.explorer {
+  transition: margin-top 0.2s ease;
+}
+
+.search-inline-container {
+  margin-left: -1rem !important;  // Or whatever the sidebar padding is
+  padding-left: 1rem;  // Add it back as padding so content is positioned correctly
+  width: calc(100% + 1rem);  // Extend width to compensate
 }
