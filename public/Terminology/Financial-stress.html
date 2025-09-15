@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Financial stress · Gauerle</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Gauerle"/><meta property="og:title" content="Financial stress · Gauerle"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Financial stress · Gauerle"/><meta name="twitter:description" content="It’s a different concept from macroeconomic financial stress Prevalence data: @sergeyev2023: 93% of US households have concerns about financial situation 46.2% of US households don’t report financial hardships @fpcanada2025: 42% of Canadians report money as their main cause of stress, from which bi..."/><meta property="og:description" content="It’s a different concept from macroeconomic financial stress Prevalence data: @sergeyev2023: 93% of US households have concerns about financial situation 46.2% of US households don’t report financial hardships @fpcanada2025: 42% of Canadians report money as their main cause of stress, from which bi..."/><meta property="og:image:alt" content="It’s a different concept from macroeconomic financial stress Prevalence data: @sergeyev2023: 93% of US households have concerns about financial situation 46.2% of US households don’t report financial hardships @fpcanada2025: 42% of Canadians report money as their main cause of stress, from which bi..."/><meta property="twitter:domain" content="quartz.gauerle.me"/><meta property="og:url" content="https://quartz.gauerle.me/Terminology/Financial-stress"/><meta property="twitter:url" content="https://quartz.gauerle.me/Terminology/Financial-stress"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="It’s a different concept from macroeconomic financial stress Prevalence data: @sergeyev2023: 93% of US households have concerns about financial situation 46.2% of US households don’t report financial hardships @fpcanada2025: 42% of Canadians report money as their main cause of stress, from which bi..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiQzpcXFVzZXJzXFxMdcOtcyBFZHVhcmRvIEdhdWVyXFxEb2N1bWVudHNcXE9ic2lkaWFuXFxxdWFydHpcXHF1YXJ0elxcY29tcG9uZW50c1xcc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://quartz.gauerle.me/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.gauerle.me/Terminology/Financial-stress-og-image.webp"/><meta property="og:image:url" content="https://quartz.gauerle.me/Terminology/Financial-stress-og-image.webp"/><meta name="twitter:image" content="https://quartz.gauerle.me/Terminology/Financial-stress-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="Terminology/Financial-stress"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".."><img src="/static/logo.png" alt="Site Logo" class="sidebar-logo"/><span class="page-title-text">Gauerle</span></a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search-inline-container"><div class="search-header"><svg class="search-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><input autocomplete="off" class="search-bar-inline" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/></div><div class="search-results-inline" data-preview="true"><div class="results-list"></div><div class="preview-pane"></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-187"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-187" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../Terminology/">Terminology</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Financial stress</a></div></nav><h1 class="article-title">Financial-stress</h1><p show-comma="true" class="content-meta"><time datetime="2025-09-15T23:32:12.000Z">Sep 15, 2025</time><span>41 min read</span></p><details class="properties-section"><summary>Properties</summary><div class="research-metadata"><div class="metadata-property"><dt><span class="property-icon property-text"></span>title</dt><dd>Financial stress</dd></div><div class="metadata-property"><dt><span class="property-icon property-tags"></span>tags</dt><dd><div class="property-tags-list"><a href="/tags/term" class="tag-link">#term</a></div></dd></div></div></details><ul class="tags"><li><a href="../tags/term" class="internal tag-link">term</a></li></ul></div></div><article class="popover-hint"><ul>
+<li>It’s a different concept from <a href=".././Terminology/Macroeconomic-financial-stress" class="internal alias internal alias" data-slug="Terminology/Macroeconomic-financial-stress">macroeconomic financial stress</a></li>
+<li>Prevalence data:
+<ul>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a>:
+<ul>
+<li>93% of US households have concerns about financial situation</li>
+<li>46.2% of US households don’t report financial hardships</li>
+</ul>
+</li>
+<li><a href=".././Articles/@fpcanada2025" class="internal internal alias" data-slug="Articles/@fpcanada2025">@fpcanada2025</a>:
+<ul>
+<li>42% of Canadians report money as their main cause of stress, from which bill payments/expenses is the main stressor (37%)</li>
+<li>49% of Canadians lose sleep because of financial worries</li>
+<li>55% of Canadians experienced negative impact on their life due to financial stress, with 38% being anxiety/depression/mental health challenges</li>
+</ul>
+</li>
+<li><a href=".././Articles/@kaastra2025" class="internal internal alias" data-slug="Articles/@kaastra2025">@kaastra2025</a>: 64% of ING Netherlands customers report some degree of financial stress, with 14% severely stressed</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>:
+<ul>
+<li>70% of US households report some degree of financial stress</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="definitions">Definitions<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#definitions" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Being afraid of being unable to meet one’s financial obligations or responsibilities (<a href=".././Articles/@northern2010" class="internal internal alias" data-slug="Articles/@northern2010">@northern2010</a>, <a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a>, <a href=".././Articles/@falconier2019" class="internal internal alias" data-slug="Articles/@falconier2019">@falconier2019</a>)</li>
+<li>Subjective, unpleasant feeling that one is unable to meet financial demands, afford necessities of life, and have sufficient funds to make ends meet, i.e. having enough income to meet expenses and pay all bills in a particular period (<a href=".././Articles/@davis2004" class="internal internal alias" data-slug="Articles/@davis2004">@davis2004</a>, <a href=".././Articles/@yates2007" class="internal internal alias" data-slug="Articles/@yates2007">@yates2007</a>, <a href=".././Articles/@mejiacordova2017" class="internal internal alias" data-slug="Articles/@mejiacordova2017">@mejiacordova2017</a>, <a href=".././Articles/@tito-betancur2021" class="internal internal alias" data-slug="Articles/@tito-betancur2021">@tito-betancur2021</a>, <a href=".././Articles/@rahman2021" class="internal internal alias" data-slug="Articles/@rahman2021">@rahman2021</a>)</li>
+<li>Psychophysiological response to the perception of imbalance, uncertainty, and risk in financial management and decision making (<a href=".././Articles/@heo2020" class="internal internal alias" data-slug="Articles/@heo2020">@heo2020</a>)</li>
+<li>Psychological factor representing an increased uncertainty about one’s financial situation and perceived financial hardship (<a href=".././Articles/@fan2022" class="internal internal alias" data-slug="Articles/@fan2022">@fan2022</a>)</li>
+<li>Psychological stress resulted from financial strain, subjection to negative financial events, such as changes to current financial position and emergencies that require sum of money beyond the normal capacity of the individual (<a href=".././Articles/@kim2006" class="internal internal alias" data-slug="Articles/@kim2006">@kim2006</a>, <a href=".././Articles/@mahdzan2019" class="internal internal alias" data-slug="Articles/@mahdzan2019">@mahdzan2019</a>)</li>
+<li>Condition of economic difficulty, characterized by not being able to support one’s expenses; suggests it’s a different concept than financial well-being (<a href=".././Articles/@sorgente2023" class="internal internal alias" data-slug="Articles/@sorgente2023">@sorgente2023</a>)</li>
+<li>Psychological stress individuals face due to a change in financial situation, inability to manage finances or lack of resources to achieve goals (<a href=".././Articles/@ozyuksel2022" class="internal internal alias" data-slug="Articles/@ozyuksel2022">@ozyuksel2022</a>)</li>
+<li>Organism’s response to a situation perceived as threatening or challenging (<a href=".././Articles/@tito-betancur2023" class="internal internal alias" data-slug="Articles/@tito-betancur2023">@tito-betancur2023</a>)</li>
+<li>Psychological construct that reflects a state where pressing financial concerns surpass available resources, endangering well-being, and includes (<a href=".././Articles/@vandijk2022" class="internal internal alias" data-slug="Articles/@vandijk2022">@vandijk2022</a>, <a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a>):
+<ul>
+<li>Situational appraisals:
+<ul>
+<li>Insufficient financial resources (captures the harmfulness of the situation)</li>
+<li>Lack of control over one’s financial situation (perceived ability to deal with the harmfulness adequately)</li>
+</ul>
+</li>
+<li>Cognitive responses: short-term focus</li>
+<li>Affective responses: financial worries and rumination</li>
+</ul>
+</li>
+<li>Refers to stresses caused by financial situations, including personal and family money matters (<a href=".././Articles/@joo1998" class="internal internal alias" data-slug="Articles/@joo1998">@joo1998</a>)</li>
+<li>Difficulty faced by an individual or a household in meeting basic financial commitments due to a shortage of money, consisting of three dimensions (<a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>, <a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>):
+<ul>
+<li>Missing out</li>
+<li>Cashflow problems</li>
+<li>Hardship</li>
+</ul>
+</li>
+<li>Worries or emotional discomfort about money and one’s financial  situation (<a href=".././Articles/@lindberg2021" class="internal internal alias" data-slug="Articles/@lindberg2021">@lindberg2021</a>, <a href=".././Articles/@mansor2022" class="internal internal alias" data-slug="Articles/@mansor2022">@mansor2022</a>. <a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a>)</li>
+<li>State of physiological or emotional arousal resulting from the perception of <a href=".././Terminology/Financial-hardship" class="internal alias internal alias" data-slug="Terminology/Financial-hardship">financial hardship</a> (<a href=".././Articles/@park2017" class="internal internal alias" data-slug="Articles/@park2017">@park2017</a>)</li>
+<li>The response to a real or perceived danger to one’s standard of living/finances, as a subdomain of <a href=".././Terminology/Financial-distress" class="internal alias internal alias" data-slug="Terminology/Financial-distress">financial distress</a> (<a href=".././Articles/@rosso2024" class="internal internal alias" data-slug="Articles/@rosso2024">@rosso2024</a>)</li>
+<li>Pressure or discomfort of an individual in managing his own financial resources (<a href=".././Articles/@andriansyah2025" class="internal internal alias" data-slug="Articles/@andriansyah2025">@andriansyah2025</a>)</li>
+<li>Feeling stressed about personal finances in general (<a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a>)</li>
+<li>Represents the strain in a household associated with either a lack of financial resources (hardship problems) or an inability to manage the available resources (cashflow problems) (<a href=".././Articles/@breunig2019" class="internal internal alias" data-slug="Articles/@breunig2019">@breunig2019</a>)</li>
+<li>Combination of physical arousal and emotional responses influenced by financial stimuli such as urgent payment <a href=".././Articles/@grable2015" class="internal internal alias" data-slug="Articles/@grable2015">@grable2015</a></li>
+<li>Emotional reaction to present financial circumstances that may not be solved only by financial counseling or financial coaching (<a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>)</li>
+<li>Persistent inability to afford the basic necessities of life <a href=".././Articles/@aslund2014" class="internal internal alias" data-slug="Articles/@aslund2014">@aslund2014</a></li>
+<li>Problems that arise when a person is faced with the threat of a shortage of money in combination with a lack of cash reserves and difficulties making ends meet (<a href=".././Articles/@starrin2009" class="internal internal alias" data-slug="Articles/@starrin2009">@starrin2009</a>)</li>
+<li>Has two broad domains, material and psychological (<a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>):
+<ul>
+<li>Material domain reflects difficulty paying monthly bills and difficulty accumulating sufficient savings</li>
+<li>Psychological domain is related to individual’s sense of mastery and coping abilities to increased feelings of hopelessness, frustration and anxiety</li>
+</ul>
+</li>
+<li>A complexity engagement, general financial responsibilities due to lack of money (<a href=".././Articles/@rahman2021" class="internal internal alias" data-slug="Articles/@rahman2021">@rahman2021</a>)</li>
+<li>The extent to which individuals perceive that their financial demands exceed their ability to meet those demands (<a href=".././Articles/@serido2014" class="internal internal alias" data-slug="Articles/@serido2014">@serido2014</a>)</li>
+<li>Subjective feelings or perception of an individual’s financial conditions for the latter (<a href=".././Articles/@park2017" class="internal internal alias" data-slug="Articles/@park2017">@park2017</a>)</li>
+<li>Partly viewed as a situation where a person fails to prioritize their household budget appropriately (<a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a>)</li>
+<li>A subjective measure of <a href=".././Terminology/Economic-stress" class="internal alias internal alias" data-slug="Terminology/Economic-stress">economic stress</a> (<a href=".././Articles/@takeuchi1991" class="internal internal alias" data-slug="Articles/@takeuchi1991">@takeuchi1991</a>)</li>
+<li>Condition in which a company or individual cannot generate income because it is unable to meet or cannot pay its financial obligations <a href=".././Articles/@kosminsky2020" class="internal internal alias" data-slug="Articles/@kosminsky2020">@kosminsky2020</a></li>
+<li>Perceived ability of one’s income to fulfil financial obligations; also referred to subjective income stress, is influenced by cognitive and affective evaluation, comparison-driven perceptions, needs or wants and temporal variation (<a href=".././Articles/@sinclair2016" class="internal internal alias" data-slug="Articles/@sinclair2016">@sinclair2016</a>)</li>
+<li>Termed as personal financial stress, is the perception that one does not have sufficient financial resources to meet one’s needs (<a href=".././Articles/@spoelma2024" class="internal internal alias" data-slug="Articles/@spoelma2024">@spoelma2024</a>)</li>
+<li>Also referred to as financial-related psychological stress or distress when they do not have adequado income, wealth, or debt to afford economic hardship (<a href=".././Articles/@friedline2021" class="internal internal alias" data-slug="Articles/@friedline2021">@friedline2021</a>)</li>
+<li>Individual’s perception of financial inadequacy and her/his financial concerns and worries (<a href=".././Articles/@wei2024" class="internal internal alias" data-slug="Articles/@wei2024">@wei2024</a>)</li>
+<li>Negative emotional responde people experience when their financial situation exposes them to uncertainty and constrains their current and future choices (<a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a>)</li>
+</ul>
+<hr/>
+<h2 id="theoretical-frameworks">Theoretical frameworks<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#theoretical-frameworks" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href=".././Theoretical-frameworks/Cognitive-transactional-stress-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Cognitive-transactional-stress-theory">Cognitive-transactional stress theory</a>:
+<ul>
+<li><a href=".././Articles/@heo2020" class="internal internal alias" data-slug="Articles/@heo2020">@heo2020</a> frames this theory in the sense that financial stress is a phenomenon in which a particular environment causes a person’s individual response</li>
+<li><a href=".././Articles/@lim2014" class="internal internal alias" data-slug="Articles/@lim2014">@lim2014</a> suggests self-efficacy operates as a cognitive mediator of stress within this framework</li>
+<li><a href=".././Articles/@tito-betancur2023" class="internal internal alias" data-slug="Articles/@tito-betancur2023">@tito-betancur2023</a> cites this theory in his framework on how to analyze stress generated by social conflicts</li>
+<li><a href=".././Articles/@guan2022" class="internal internal alias" data-slug="Articles/@guan2022">@guan2022</a>: the individual’s subjetive perception, as well its expectation, may mediate the relationship between objetive financial stressors and the degree of financial stress</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a>: consider debt delinquency a stressor, financial stress the outcome, and to reduce that, people seek coping resources, like financial capability</li>
+<li><a href=".././Articles/@ryu2023" class="internal internal alias" data-slug="Articles/@ryu2023">@ryu2023</a> suggests this theory as explanation to a domain-specific perceived source of stress</li>
+<li><a href=".././Articles/@serido2014" class="internal internal alias" data-slug="Articles/@serido2014">@serido2014</a>: uses this framework to approach financial stress</li>
+<li><a href=".././Articles/@tran2018" class="internal internal alias" data-slug="Articles/@tran2018">@tran2018</a>: underscore the presence of stress does not guarantee an aversive health outcome, as adaptive coping can disrupt the stress-outcome link</li>
+<li><a href=".././Articles/@ozyuksel2022" class="internal internal alias" data-slug="Articles/@ozyuksel2022">@ozyuksel2022</a>: explained the pervasive nature of stress on psychology and physiology</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Systemic‐transactional-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Systemic‐transactional-theory">Systemic‐transactional theory</a>:
+<ul>
+<li><a href=".././Articles/@falconier2019" class="internal internal alias" data-slug="Articles/@falconier2019">@falconier2019</a> proposed that one may cope with stress individually and/or may seek and/or receive assistance from partners to cope, and vice-versa, engaging a process of mutual support/coping</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Roy-adaptation-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Roy-adaptation-theory">Roy adaptation theory</a>:
+<ul>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a> suggested in this framework that financial stressors are stimuli to the individual, an adaptative system, which processes them based on coping mechanisms</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Social-causation-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Social-causation-theory">Social causation theory</a>:
+<ul>
+<li><a href=".././Articles/@guan2022" class="internal internal alias" data-slug="Articles/@guan2022">@guan2022</a>: when measured by income and financial hardships, financial stress can be related to a context of economic uncertainty, unhealthy lifestyle, bad living environment and other social variables</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Social-selection-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Social-selection-theory">Social selection theory</a>:
+<ul>
+<li><a href=".././Articles/@guan2022" class="internal internal alias" data-slug="Articles/@guan2022">@guan2022</a>: individuals with poor mental health are at risk of bad financial situations and prone to expend on healthcare: decreased productivity ⇒ unemployment ⇒ decreased income</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Simple-ABCX-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Simple-ABCX-theory">Simple ABCX theory</a>:
+<ul>
+<li><a href=".././Articles/@choi2020" class="internal internal alias" data-slug="Articles/@choi2020">@choi2020</a>: posited that job insecurity acts as an event that may induce a level of financial stress, financial well-being functions as either a resource or a conditioning factor of the perception of the stressor</li>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>: financial stressors lead to financial stress, which could lead to two potential outcomes such as maladaptation or bonadaptation</li>
+<li><a href=".././Articles/@park2017" class="internal internal alias" data-slug="Articles/@park2017">@park2017</a>: argues that a financial stressor can be viewed as a stimulus that forces an individual to change behavior</li>
+<li><a href=".././Articles/@wei2014" class="internal internal alias" data-slug="Articles/@wei2014">@wei2014</a>: economic hardship intensifies financial pressures on the family, leading to marital conflict and inadequate parenting</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Family-systems-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Family-systems-theory">Family systems theory</a>:
+<ul>
+<li><a href=".././Articles/@wickrama2021" class="internal internal alias" data-slug="Articles/@wickrama2021">@wickrama2021</a>: suggested that individuals in close relationships are interconnected and interdependent, in which struggles can faze the network between them, summing effects of exposures and problems</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Stress-process-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Stress-process-theory">Stress process theory</a>:
+<ul>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>: a person’s economic circumstances affect their exposure to stress, which lead to worry and feeling upset about financial burdens</li>
+<li><a href=".././Articles/@hughes2014" class="internal internal alias" data-slug="Articles/@hughes2014">@hughes2014</a>: as a type of stress, financial stress may be associated with elevated depressive symptoms</li>
+<li><a href=".././Articles/@ryu2023" class="internal internal alias" data-slug="Articles/@ryu2023">@ryu2023</a>: uses this theory to subside the process caused by stress, which lead to consequences on mental health</li>
+<li><a href=".././Articles/@wickrama2021" class="internal internal alias" data-slug="Articles/@wickrama2021">@wickrama2021</a>: explain stress and its responses may proliferate across multiple domains over the life course</li>
+<li><a href=".././Articles/@tran2018" class="internal internal alias" data-slug="Articles/@tran2018">@tran2018</a>: support (instrumental, informational, emotional) from others can be an important social advantage to nerf stressors</li>
+<li><a href=".././Articles/@joo1998" class="internal internal alias" data-slug="Articles/@joo1998">@joo1998</a>: many activities of daily life and many changes to succeed are closely related to current levels of personal financial resources</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a>: allows the possibility to test assumptions about new potential correlates through nuanced pathways</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Strength-and-vulnerability-integration-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Strength-and-vulnerability-integration-theory">Strength and vulnerability integration theory</a>:
+<ul>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>: older adults can experience stress when facing longer-term exposure, despite the strengths of their experience and adaptation</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Ecological-systems-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Ecological-systems-theory">Ecological systems theory</a>:
+<ul>
+<li><a href=".././Articles/@montpetit2015" class="internal internal alias" data-slug="Articles/@montpetit2015">@montpetit2015</a>: interpret the relationships between well-being, financial stress, neighborhood, and social integration as mesosystems</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Life-cycle-theory-of-saving" class="internal alias internal alias" data-slug="Theoretical-frameworks/Life-cycle-theory-of-saving">Life-cycle theory of saving</a>:
+<ul>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a>: the relationship between financial stress and age supports the pattern of saving/dissaving pressure during the life-cycles</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a>: over lifespan, one’s income level and consumption level are stable, so that, when income shocks occur, borrowing is needed to smooth consumption</li>
+<li><a href=".././Articles/@joo1998" class="internal internal alias" data-slug="Articles/@joo1998">@joo1998</a>: the financial stress severity may vary according to one’s stage in life</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Identity-relevant-stress-hypothesis" class="internal alias internal alias" data-slug="Theoretical-frameworks/Identity-relevant-stress-hypothesis">Identity-relevant stress hypothesis</a>:
+<ul>
+<li><a href=".././Articles/@hughes2014" class="internal internal alias" data-slug="Articles/@hughes2014">@hughes2014</a>: when a stressor threatens a valued identity, its effects on mental health are even more adversely, unless the identity greatly influences stress appraisal</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Self-efficacy-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Self-efficacy-theory">Self-efficacy theory</a>:
+<ul>
+<li><a href=".././Articles/@lim2014" class="internal internal alias" data-slug="Articles/@lim2014">@lim2014</a>: refers to benefits expected from high-levels of self-efficacy, specially on mental and physical health</li>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a>: argues that higher financial self-efficacy should elicit positive financial behaviors</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Prospect-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Prospect-theory">Prospect theory</a>:
+<ul>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a>: suggests gamblers have heightened loss aversion as financial stress enters the game</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Social-role-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Social-role-theory">Social role theory</a>:
+<ul>
+<li><a href=".././Articles/@spoelma2024" class="internal internal alias" data-slug="Articles/@spoelma2024">@spoelma2024</a>: uses this framework to justify why leaders may suffer financial stress unequally, based on their genders</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Tend-and-befriend-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Tend-and-befriend-theory">Tend-and-befriend theory</a>:
+<ul>
+<li><a href=".././Articles/@spoelma2024" class="internal internal alias" data-slug="Articles/@spoelma2024">@spoelma2024</a>: financial stress should be associated with elevated communion-striving motivation and empathic leadership, among women</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Double-ABCX-theory" class="internal alias internal alias" data-slug="Theoretical-frameworks/Double-ABCX-theory">Double ABCX theory</a>:
+<ul>
+<li><a href=".././Articles/@mejiacordova2017" class="internal internal alias" data-slug="Articles/@mejiacordova2017">@mejiacordova2017</a>: the accumulation of familial tensions and stressors lead the family system to collapse, leading to worse functioning and well-being, according to its capacity of adaptation</li>
+<li><a href=".././Articles/@joo1998" class="internal internal alias" data-slug="Articles/@joo1998">@joo1998</a>: bases his conceptual model of personal financial wellness and worker job productivity on the aspects that rule stressors and adaptation, adapted to individuals</li>
+</ul>
+</li>
+<li><a href=".././Theoretical-frameworks/Yerkes-Dodson-law" class="internal alias internal alias" data-slug="Theoretical-frameworks/Yerkes-Dodson-law">Yerkes-Dodson law</a>:
+<ul>
+<li><a href=".././Articles/@ozyuksel2022" class="internal internal alias" data-slug="Articles/@ozyuksel2022">@ozyuksel2022</a>: explained why when financial stress level is either low or high, the performance may deteriorate</li>
+</ul>
+</li>
+<li><a href=".././Terminology/Job-demands-resources-theory" class="internal alias internal alias" data-slug="Terminology/Job-demands-resources-theory">Job demands-resources theory</a>:
+<ul>
+<li><a href=".././Articles/@wei2024" class="internal internal alias" data-slug="Articles/@wei2024">@wei2024</a>: financial stress may evoke both work engagement and performance, but this relationship might be influenced by emotional exhaustion</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="measurements">Measurements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#measurements" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h4 id="formal-scales">Formal scales<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#formal-scales" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>, <a href=".././Articles/@digiacomo2020" class="internal internal alias" data-slug="Articles/@digiacomo2020">@digiacomo2020</a>: <a href=".././Scales/ABSFSS" class="internal internal alias" data-slug="Scales/ABSFSS">ABSFSS</a></li>
+<li><a href=".././Articles/@heo2020" class="internal internal alias" data-slug="Articles/@heo2020">@heo2020</a>, <a href=".././Articles/@choi2020" class="internal internal alias" data-slug="Articles/@choi2020">@choi2020</a>: <a href=".././Scales/APRFSS" class="internal internal alias" data-slug="Scales/APRFSS">APRFSS</a></li>
+<li><a href=".././Articles/@mahdzan2019" class="internal internal alias" data-slug="Articles/@mahdzan2019">@mahdzan2019</a>, <a href=".././Articles/@rahman2021" class="internal internal alias" data-slug="Articles/@rahman2021">@rahman2021</a>: <a href=".././Scales/PASTINDX" class="internal internal alias" data-slug="Scales/PASTINDX">PASTINDX</a></li>
+</ul>
+<h4 id="ad-hoc-measures">Ad-hoc measures<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ad-hoc-measures" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a> used 1-item measure: ‘I feel stressed about my personal finances in general’</li>
+<li><a href=".././Articles/@bailey1998" class="internal internal alias" data-slug="Articles/@bailey1998">@bailey1998</a> used the following items:
+<ul>
+<li>‘Inadequate income’</li>
+<li>‘Disagreements over how to spend money’</li>
+<li>‘Lack of savings’</li>
+<li>‘Employer policy on payment of wages creates problems’</li>
+<li>‘I am paid fairly for what I do’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@mansor2022" class="internal internal alias" data-slug="Articles/@mansor2022">@mansor2022</a> measured financial stress through a 6-item instrument:
+<ul>
+<li>‘I couldn’t sleep because I was worried about paying the bill’</li>
+<li>‘I am getting depressed and restless with my current financial situation’</li>
+<li>‘I can’t afford (financially) to see a doctor when I’m sick’</li>
+<li>‘I can’t afford (financially) to get healthier food’</li>
+<li>‘I have high blood pressure due to financial difficulties’</li>
+<li>‘I’m worried about medical expenses’</li>
+<li>‘I became depressed as a result of thinking about finances’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@breunig2019" class="internal internal alias" data-slug="Articles/@breunig2019">@breunig2019</a> measured financial stress asking if, in the last 12 months, happened:
+<ul>
+<li>‘Inability to pay the mortgage or rent on time’</li>
+<li>‘Inability to pay bills on time’</li>
+<li>‘Pawning or selling something’</li>
+<li>‘Asking for financial help from family or friends’</li>
+<li>‘Asking help from welfare or community organisations’</li>
+<li>‘Inability to heat the home’</li>
+<li>‘Missing meals’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@fan2022" class="internal internal alias" data-slug="Articles/@fan2022">@fan2022</a> constructed a latent variable using:
+<ul>
+<li>‘I worry about running out of money’</li>
+<li>‘Thinking about my personal finances can make me feel anxious’</li>
+<li>‘Discussing my finances can make my heart race or make me feel stressed’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@lim2014" class="internal internal alias" data-slug="Articles/@lim2014">@lim2014</a> measure financial stress with a factor score:
+<ul>
+<li>‘I feel stressed about my personal finances’</li>
+<li>‘I worry about being able to pay monthly expenses’</li>
+<li>‘I worry about having enough money to pay for school’</li>
+<li>‘How much stress does the total amount of money you owe cause you?’</li>
+<li>‘How much stress does credit card debt cause you?’</li>
+<li>‘Hou much stress does student loan debt cause you?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@lazarevic2016" class="internal internal alias" data-slug="Articles/@lazarevic2016">@lazarevic2016</a> used a single item: ‘How often do you worry about your financial situation?’</li>
+<li><a href=".././Articles/@aslund2014" class="internal internal alias" data-slug="Articles/@aslund2014">@aslund2014</a> used the following items:
+<ul>
+<li>‘During the past 12 months, has it been difficult for you to pay your monthly costs, such as rent, mortgage, etc.?’</li>
+<li>‘If you suddenly ended up in an unforeseen situation where you had to raise € 2100, would you be able to?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a> asked if, in the past 6 months:
+<ul>
+<li>‘Could not pay electricity, gas, or telephone bills on time?’</li>
+<li>‘Could not pay the mortgage or rent on time?’</li>
+<li>‘Pawned or sold something?’</li>
+<li>‘Went without meals?’</li>
+<li>‘Was unable to heat home?’</li>
+<li>‘Did you asked for financial help from friends or family?’</li>
+<li>‘Did you asked for help from a welfare/community organization?’</li>
+<li>‘Could you raise, within a week, AUS$ 2000 for an emergency?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@starrin2009" class="internal internal alias" data-slug="Articles/@starrin2009">@starrin2009</a> created a weighted questionnaire:
+<ul>
+<li>‘During the last three months has it been difficult for you to pay your monthly costs, like rent, mortgages and so on?’</li>
+<li>‘During the last three months, have you been forced to raise money for your monthly costs by taking extra measures?’</li>
+<li>‘During the last three months, have you been forced to limit or refrain from buying necessary things because of lack of money?’</li>
+<li>‘If you suddenly ended up in an unforeseen situation where you have to raise SEK 18k, would you be able to?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a> measured objetive and subjective domains:
+<ul>
+<li>‘How difficult is it for you to meet monthly payments on your bills?’</li>
+<li>‘Please read the list below and indicate whether or not any of these are current and ongoing problems that have lasted twelve months or longer. If the problem is happening to you, indicate how upsetting it has been.’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a> tested asking:
+<ul>
+<li>How strongly do you agree or disagree with the following statements:
+<ul>
+<li>‘Discussing my finances can make my heart race or make me feel stressed’</li>
+<li>‘Thinking about my personal finances can make me feel anxious’</li>
+<li>‘I worry about running out of money in retirement’</li>
+<li>‘I have too much debt right now’</li>
+<li>‘In a typical month, how difficult is it for you to cover your expenses and pay all your bills?’</li>
+</ul>
+</li>
+<li>Or by a yes/no questions on having: ‘collector calls’, ‘unpaid medical bills’, and ‘income drop’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@montpetit2015" class="internal internal alias" data-slug="Articles/@montpetit2015">@montpetit2015</a> used these questions:
+<ul>
+<li>‘How would you rate your current financial situation?’</li>
+<li>‘Looking ahead ten years into the future, what do you expect your financial situation will be like at that time?’</li>
+<li>‘How much control do you have over your current financial situation?’</li>
+<li>‘How much thought and effort do you put into your current financial situation?’</li>
+<li>‘In general, which of the statements below describes the current financial situation of you and your family? Have enough money, doesn’t have enough money, or has more than enough money’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a> used items from the ABS Survey of Income and Housing:
+<ul>
+<li>‘Assistance sought from welfare/community organisations due to shortage of money’</li>
+<li>‘Pawned or sold something due to shortage of money’</li>
+<li>‘Sought financial help from friends/family due to a shortage of money’</li>
+<li>‘Unable to heat home due to shortage of money’</li>
+<li>‘Went without meals due to shortage of money’</li>
+<li>‘Whether could not pay gas/electricity/telephone bill on time due to shortage of money’</li>
+<li>‘Whether could not pay registration/insurance on time due to shortage of money’</li>
+<li>‘Could not raise $2000 within a week’</li>
+<li>‘Could not raise $500 within a week’</li>
+<li>‘Spend more money than we get’</li>
+<li>‘Could not make minimum repayment on credit card’</li>
+<li>‘Went without dental treatment due to shortage of money’</li>
+<li>‘Could not pay mortgage or rent on time due to shortage of money’</li>
+<li>‘Could not pay home or contents insurance due to shortage of money’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a> measured financial stress focusing on debt: ‘In the past 12 months, how much stress did you feel because of your total debt, if any? Would you say a great deal of stress, quite a bit of stress, some stress, very little stress or no stress at all?’</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a> used four dependent variables of financial stress:
+<ul>
+<li>‘I worry about running out of money’</li>
+<li>‘Thinking about my personal finances can make me feel anxious’</li>
+<li>‘Discussing my finances can make my heart race or make me feel stressed’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@kareholt2025" class="internal internal alias" data-slug="Articles/@kareholt2025">@kareholt2025</a> measured with two questions as an index:
+<ul>
+<li>‘How satisfied are you with your financial situation?’</li>
+<li>‘Is your financial situation now better or worse than before?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@serido2014" class="internal internal alias" data-slug="Articles/@serido2014">@serido2014</a> uses three index measures:
+<ul>
+<li><a href=".././Terminology/Financial-strain" class="internal alias internal alias" data-slug="Terminology/Financial-strain">Financial strain</a>, asking whether in the past 12 months:
+<ul>
+<li>‘Was without telephone service for any reason?’</li>
+<li>‘Did noy pay the full amount of the rent or mortgage because you did not have money?’</li>
+<li>‘Did not pay the full amount of gas, electricity or oil bill because you did not have enough money?’</li>
+</ul>
+</li>
+<li>Lack of financial access, banked status:
+<ul>
+<li>‘Do you have a savings account?’</li>
+<li>‘Do you have a credit card?’</li>
+<li>‘Do you have a checking account?’</li>
+</ul>
+</li>
+<li>Public assistance, assessing <a href=".././Terminology/Financial-hardship" class="internal alias internal alias" data-slug="Terminology/Financial-hardship">financial hardship</a>: ‘Have you ever received any public assistance or welfare payments other than food stamps?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a> asked questions on worry over delay in payment and financial conditions:
+<ul>
+<li>‘Do you have fearful thoughts about your financial future?’</li>
+<li>‘Do you feel powerless or experience a loss of control when it comes to money?’</li>
+<li>‘Is money your ‘scapegoat’, the reason you give yourself for not living the life you want?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@sturgeon2016" class="internal internal alias" data-slug="Articles/@sturgeon2016">@sturgeon2016</a>:
+<ul>
+<li>‘Have a major worsening of financial condition’</li>
+<li>‘Been pressured to pay bills by stores, creditors, or bill collectors’</li>
+<li>‘Been unable to pay to medication or other medical necessities’</li>
+<li>‘Fallen behind in paying the rent or mortgage’</li>
+<li>‘Been unable to purchase needed food’</li>
+<li>‘Had a car, furniture, or some items bought on an installment plan repossessed’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@taylor2017" class="internal internal alias" data-slug="Articles/@taylor2017">@taylor2017</a> tackled household financial strain in the last 12 months:
+<ul>
+<li>‘Has an adult in the household lost their job?’</li>
+<li>‘Could not pay gas, electricity or telephone bills?’</li>
+<li>‘Could not pay the mortgage or rent payments?’</li>
+<li>‘Were unable to pay for school requirements or extras?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@wei2014" class="internal internal alias" data-slug="Articles/@wei2014">@wei2014</a> measured family financial stress through:
+<ul>
+<li>‘My household is poor and in need of money’</li>
+<li>‘I was hope to pay lower medical fees for my children when they are sick or injured’</li>
+<li>‘I hope the tuition of my children to be reduced’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@yates2007" class="internal internal alias" data-slug="Articles/@yates2007">@yates2007</a> suggested financial stress indicators:
+<ul>
+<li>‘Could not pay gas/electricity/telephone bill on time’</li>
+<li>‘Sought financial help from friends/family’</li>
+<li>‘Could not pay registration/insurance on time’</li>
+<li>‘Pawned or sold something’</li>
+<li>‘Went without meals’</li>
+<li>‘Sought assistance from welfare/community organisations’</li>
+<li>‘Unable to heat home’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@mejiacordova2017" class="internal internal alias" data-slug="Articles/@mejiacordova2017">@mejiacordova2017</a>: ‘Como calificaria su nivel de estrés financiero?’</li>
+<li><a href=".././Articles/@kim2006" class="internal internal alias" data-slug="Articles/@kim2006">@kim2006</a> appraised perceived stress and retirement income security:
+<ul>
+<li>‘What do you feel is the level of your financial stress today?’</li>
+<li>‘How secure do you feel about your personal finances for retirement?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@lindberg2021" class="internal internal alias" data-slug="Articles/@lindberg2021">@lindberg2021</a>: ‘How often do you worry about how much money your family has?’</li>
+<li><a href=".././Articles/@jeworrek2025" class="internal internal alias" data-slug="Articles/@jeworrek2025">@jeworrek2025</a> asked:
+<ul>
+<li>‘How concerned are you about your current financial situation?’</li>
+<li>‘How concerned are you about not maintaining your current standard of living in old age?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a> assessed agreement to:
+<ul>
+<li>‘I have enough money to participate in most of the same activities as my peers’</li>
+<li>‘I feel stressed about my personal finances in general’</li>
+<li>‘I worry about being able to pay my current monthly expenses’</li>
+<li>‘I worry about having enough money to pay for school’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@sorgente2023" class="internal internal alias" data-slug="Articles/@sorgente2023">@sorgente2023</a>, on subjective financial stress:
+<ul>
+<li>‘During the past 24 hours, how much has your economic and financial life stressed you out?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a>:
+<ul>
+<li>‘On a scale 1 to 10, how concerned are you about your current financial situation?’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@kaastra2025" class="internal internal alias" data-slug="Articles/@kaastra2025">@kaastra2025</a>:
+<ul>
+<li>‘Number of missed payments in the last 12 months’</li>
+<li>‘Number of months with expenses &lt;90% of inflow’</li>
+<li>‘Number of months that customers can overcome a loss of inflow’</li>
+<li>‘Monthly short-term debt versus inflow’</li>
+</ul>
+</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>:
+<ul>
+<li>‘Spending is less than income’</li>
+<li>‘Pay all bills on time’</li>
+<li>‘Have enough savings to cover at least 3 months of living expenses’</li>
+<li>‘Have a manageable amount of debt or no debt’</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="determinants">Determinants<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#determinants" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h4 id="age">Age<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#age" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@digiacomo2020" class="internal internal alias" data-slug="Articles/@digiacomo2020">@digiacomo2020</a>: informal carers younger than 65 years have greater financial stress (OR=2.54), controlling for household income, caring hours, types of disease, types of disease and type of care</li>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a> suggested older adults experience less financial stress, while controlling for sociodemographic and health variables: 25-39 (OR=0.53), 40-54 (OR=0.27), and >55 (OR=0.10), in comparison to the 18-24 group</li>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>, controlling for demographic and personal variables: lagged age protected against bill-paying difficulty (OR=0.94) and ongoing financial strain (OR=0.95) among older adults</li>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a> showed an inverse relationship between age and financial stress:
+<ul>
+<li>30-37y (vs. >63) led to increased financial stress (β=0.07)</li>
+<li>38-45y (vs. >63) led to increased financial stress (β=0.07)</li>
+<li>46-53y (vs. >63) led to increased financial stress (β=0.05)</li>
+<li>54-62y (vs. >63) led to increased financial stress (β=0.05)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a>, adjusting by demographic and personal variables, age groups of the head of the household were related to financial stress:
+<ul>
+<li>&lt;35y (vs. >74) led to decreased financial stress (OR=0.36)</li>
+<li>35-49y (vs. >74) led to increased financial stress (OR=3.56)</li>
+<li>50-64y (vs. >74) led to increased financial stress (OR=6.35)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed age in years was associated with financial stress in different presentations:
+<ul>
+<li>For any financial stress (β=-0.02)</li>
+<li>For cashflow problems stress (β=0.3)</li>
+<li>For financial hardship (β=0.02)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a>: compared to the 40-49y age group, being older was protective against debt stress:
+<ul>
+<li>Little debt stress: 50-64y (OR=0.63), >65 (OR=0.34)</li>
+<li>Some debt stress: 50-64y (OR=0.67), >65 (OR=0.25)</li>
+<li>Quite a bit of debt stress: 50-64y (OR=0.58), >65 (OR=0.24)</li>
+<li>Great debt stress: 50-64y (OR=0.55), >65 (OR=0.63)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a> found age to be a protective factor against financial stress, considering:
+<ul>
+<li>Higher-order construct (β=-0.12), and:
+<ul>
+<li>Money shortage domain (β=-0.14)</li>
+<li>Lack of control domain (β=-0.11)</li>
+<li>Worries domain (β=-0.07)</li>
+<li>Short-focus domain (β=-0.06)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@dunn2016" class="internal internal alias" data-slug="Articles/@dunn2016">@dunn2016</a>: being older was related with decreased debt stress (b=-0.02)</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>: being older (age in logarithmic scale) is protective against financial stress (β=-0.11), among gamblers</li>
+<li><a href=".././Articles/@yates2007" class="internal internal alias" data-slug="Articles/@yates2007">@yates2007</a> suggested older age groups (>65 years old) experience less financial stress:
+<ul>
+<li>Age &lt;25 (OR=12.74)</li>
+<li>Age 25-34 (OR=9.46)</li>
+<li>Age 35-44 (OR=8.84)</li>
+<li>Age 45-64 (OR=5.18)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a> showed age has an inverted-U pattern, with a turning point on 47 years:
+<ul>
+<li>Raw age (b=0.02)</li>
+<li>Age²/100 (b=-0.11)</li>
+</ul>
+</li>
+</ul>
+<h4 id="gender">Gender<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gender" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a>: males were less likely to experience financial stress (OR=0.62)</li>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a>: males have decreased risk of reporting financial stress (OR=0.73)</li>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>: female gender was associated with increased financial stress (β=0.03)</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a>: male gender was related to decreased financial stress (OR=0.95)</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a>: female gender was associated with increased likelihood of suffering (vs. no debt stress):
+<ul>
+<li>Some debt stress (OR=1.5)</li>
+<li>Quite a bit of debt stress (OR=1.64)</li>
+<li>Great debt stress (OR=1.9)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a>: male gender (vs. female) was related to decreased financial stress levels, for:
+<ul>
+<li>Higher-order construct (β=-0.12)</li>
+<li>Worries domain (β=-0.17)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a>: male gender (vs. female) was associated with financial stress (β=-0.07)</li>
+<li><a href=".././Articles/@dunn2016" class="internal internal alias" data-slug="Articles/@dunn2016">@dunn2016</a>: male gender (vs. female) was related with decreased financial stress (b=-0.23)</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>: female gender (vs. male) is a risk factor for financial stress (β=0.03), among gamblers</li>
+<li><a href=".././Articles/@wei2024" class="internal internal alias" data-slug="Articles/@wei2024">@wei2024</a>: female gender (vs. male) led to increased financial stress (b=0.10)</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a>: being male (vs. female) was protective against financial stress (b=-0.04)</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a>: being female (vs. male) was a risk to financial stress (b=0.21)</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>: LGBTQIA+ (vs. other) have increased odds of being financially vulnerable (OR=1.60)</li>
+</ul>
+<h4 id="marital-status">Marital status<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#marital-status" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a>: single (OR=1.23) and separated (OR=1.53) adults (vs. married/living with someone) have increased risk of financial stress, controlling for sociodemographic and health variables</li>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>, controlling for demographic and personal variables: lagged separated, divorced or widowed marital status predicted bill-paying difficulty (OR=1.23) among older adults</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed being married (vs. otherwise) was associated with financial stress in different presentations:
+<ul>
+<li>For any financial stress (β=-0.23)</li>
+<li>For cashflow problems stress (β=-0.24)</li>
+<li>For financial hardship (β=-0.25)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a>: compared to married or cohabitating individuals, being separated predicted debt stress (vs. no debt stress):
+<ul>
+<li>Little debt stress (OR=1.47)</li>
+<li>Some debt stress (OR=2.10)</li>
+<li>Quite a bit of debt stress (OR=2.48)</li>
+<li>Great debt stress (OR=3.19)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@dunn2016" class="internal internal alias" data-slug="Articles/@dunn2016">@dunn2016</a>: being married (vs. nonmarried) led to increased debt stress (b=0.14)</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a> found different relationships between marital status and financial stress (vs. single), among gamblers:
+<ul>
+<li>Married (β=-0.06)</li>
+<li>Defacto (β=0.03)</li>
+<li>Separated (β=0.04)</li>
+<li>Divorced (β=0.03)</li>
+<li>Widowed (β=-0.04)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a>: being married (vs. non-married) led to increased financial stress (b=0.13)</li>
+</ul>
+<h4 id="ethnicity">Ethnicity<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ethnicity" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a>: Black students were less likely to report financial stress (OR=0.48)</li>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>: Hispanic adults (vs. White) was related with increased financial stress (β=0.02)</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a> found ethnicities to predict financial stress (compared to White):
+<ul>
+<li>Black (β=-0.08)</li>
+<li>Hispanic (β=-0.02)</li>
+<li>Asian/others (β=-0.01)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@dunn2016" class="internal internal alias" data-slug="Articles/@dunn2016">@dunn2016</a>: being Hispanic (vs. other groups) is a risk for increased debt stress (b=0.24)</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a>: being Black (vs. White) was related to decreased financial stress (b=-0.16)</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a> found important relationship between ethnicity and financial stress:
+<ul>
+<li>Black households (vs. White) have increased financial stress (OR=2.74)</li>
+<li>Latinx household (vs. White) have increased financial stress (OR=20.1)</li>
+</ul>
+</li>
+</ul>
+<h4 id="debt">Debt<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#debt" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a> found different types of debt were related to financial stress:
+<ul>
+<li>Above average expected student loan (OR=2.8)</li>
+<li>Current debt (OR=1.78)</li>
+<li>Debt delinquency(OR=1.51)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>:
+<ul>
+<li>Consumer debt repayment was related to increased financial stress (OR=1.1)</li>
+<li>Student loan repayment was related to decreased financial stress (OR=0.93)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@mansor2022" class="internal internal alias" data-slug="Articles/@mansor2022">@mansor2022</a>: increased debt vulnerability is related with increased financial stress (β=0.45) in low-income households, controlled by financial behavior, financial knowledge, financial well-being, income and locus of control</li>
+<li><a href=".././Articles/@breunig2019" class="internal internal alias" data-slug="Articles/@breunig2019">@breunig2019</a> found that:
+<ul>
+<li>For non-Indigenous Australians: mortgage debt predicted household financial stress (OR=8.16)</li>
+<li>For Indigenous Australians: mortgage debt led to increased household financial stress (OR=9.97)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>, controlling for demographic and personal variables, using lagged predictors:
+<ul>
+<li>Credit card debt amount predicted both bill-paying difficulty (OR=1.6) and ongoing financial strain (OR=1.9) among older adults</li>
+<li>Total 1st residence mortgage balance predicted both bill-paying difficulty (OR=1.04) and ongoing financial strain (OR=1.05) among older adults</li>
+</ul>
+</li>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>: both reported high debt (β=0.22) and inability to pay the bills (β=0.24) were related to increased financial stress</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed both mortgage and credit card debt were associated with financial stress in different presentations:
+<ul>
+<li>Mortgage:
+<ul>
+<li>For any financial stress (β=0.13)</li>
+<li>For cashflow problems stress (β=0.13)</li>
+<li>For financial hardship (β=0.16)</li>
+</ul>
+</li>
+<li>Credit card:
+<ul>
+<li>For any financial stress (β=-0.12)</li>
+<li>For cashflow problems stress (β=-0.16)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a> suggested the number of debts is related to increased financial stress:
+<ul>
+<li>For higher-level construct (β=0.22)</li>
+<li>And for the components
+<ul>
+<li>Money shortage (β=0.21)</li>
+<li>Lack of control (β=0.22)</li>
+<li>Financial worries (β=0.11)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a> showed debt predicted financial stress, either by:
+<ul>
+<li>Debt payment delinquency, as per:
+<ul>
+<li>Mortgage (β=0.09), moderated by financial capability (β=0.05)</li>
+<li>Credit card (β=0.11), moderated by financial capability (β=0.07)</li>
+<li>Student loan (β=0.04), moderated by financial capability (β=0.05)</li>
+</ul>
+</li>
+<li>Student loan ownership (β=0.06, vs. non-holders)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@dunn2016" class="internal internal alias" data-slug="Articles/@dunn2016">@dunn2016</a> found debt type-to-income ratios to be related with debt stress:
+<ul>
+<li>Payday loan debt (b=2.20)</li>
+<li>Credit card debt (b=1.03)</li>
+<li>Student loan debt (b=0.46)</li>
+<li>Family, friends, other loans debt (b=0.43)</li>
+<li>Bank loan debt (b=0.41)</li>
+<li>Installment loan debt (b=0.34)</li>
+<li>Heloc debt (b=0.33)</li>
+<li>Mortgage debt (b=0.28)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a>: monthly debt repayment was an important financial stressor (OR=1.14)</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a> showed student loan debt amount was proportional to financial stress severity:
+<ul>
+<li>A maximum of $10k debt (vs. none) was related with increased stress (b=0.38)</li>
+<li>
+<blockquote>
+<p>60k debt (vs. none) was related with very high increases in financial stress (b=0.96)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>: households with outstanding credit card debt had increased financial stress (OR=3.16)</li>
+</ul>
+<h4 id="wealth">Wealth<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#wealth" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>, controlling for demographic and personal variables: lagged net cash assets protected against bill-paying difficulty (OR=0.92) and ongoing financial strain (OR=0.95) among older adults</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a>, adjusting by demographic and personal variables:
+<ul>
+<li>Increased wealth (log) was related with decreased financial stress (OR=0.65)</li>
+<li>This relationship was moderated by age: &lt;35y (OR=1.09), 35-49y (OR=0.44), and 50-64y (OR=0.89)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@dunn2016" class="internal internal alias" data-slug="Articles/@dunn2016">@dunn2016</a>: assets (log) was a protection factor against debt stress (b=-0.11)</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a>: net financial assets amount was protective against financial stress (b=-0.11)</li>
+</ul>
+<h4 id="income">Income<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#income" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@digiacomo2020" class="internal internal alias" data-slug="Articles/@digiacomo2020">@digiacomo2020</a>: lower income (>60k AUD) is associated with greater financial stress in informal carers (OR=2.69)</li>
+<li><a href=".././Articles/@mansor2022" class="internal internal alias" data-slug="Articles/@mansor2022">@mansor2022</a>: in low-income households, increased income vulnerability relates to increased financial stress (β=0.07), controlled by financial behavior, financial knowledge, financial well-being, debt and locus of control</li>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>:
+<ul>
+<li>Households subsided by pension (compared to self-employed, investments, and wages) suffer from greater financial stress (OR=1.25)</li>
+<li>Lower income (comparing in quintiles) is associated with greater financial stress (OR=1.93)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@breunig2019" class="internal internal alias" data-slug="Articles/@breunig2019">@breunig2019</a> found:
+<ul>
+<li>For non-Indigenous Australians: increased log(income) decreased household financial stress (OR=0.74), moderated by mortgage debt (OR=0.65)</li>
+<li>For Indigenous Australians: increased log(income) decreased household financial stress (OR=0.65), moderated by mortgage debt (OR=0.68), having children (OR=0.67) and having a partner (OR=0.81)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a>: household income is inversely proportional to financial stress, controlling for sociodemographic and health variables: 25-49k (OR=0.82), 50-74k (OR=0.62), and >75k (OR=0.42), in comparison to &lt;25k</li>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>, controlling for sociodemographic characteristics:
+<ul>
+<li>Reported income drop was related to increased financial stress (β=0.14)</li>
+<li>&lt;25 USD income (vs. >100k) was related with increased financial stress (β=0.02)</li>
+<li>25-49k USD income (vs. >100k) was related with increased financial stress (β=0.04)</li>
+<li>50-74k USD income (vs. >100k) was related with increased financial stress (β=0.02)</li>
+<li>75-100k USD income (vs. >100k) was related with increased financial stress (β=0.03)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed household income (log) was associated with financial stress in different presentations:
+<ul>
+<li>For any financial stress (β=-0.35)</li>
+<li>For cashflow problems stress (β=-0.28)</li>
+<li>For financial hardship (β=-0.41)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a> supported that household income is protective against debt stress (vs. no debt stress):
+<ul>
+<li>Some debt stress (OR=0.94)</li>
+<li>Quite a bit of debt stress (OR=0.88)</li>
+<li>Great debt stress (OR=0.78)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a> found income amount predicted financial stress:
+<ul>
+<li>For higher-level construct (β=-0.61), being moderated by employment status (β=0.37)</li>
+<li>And for the components
+<ul>
+<li>Money shortage (β=-0.62), being moderated by employment status (β=0.34) and savings buffer (β=0.20)</li>
+<li>Lack of control (β=-0.37)</li>
+<li>Financial worries (β=-0.57), moderated by savings buffer (β=0.16)</li>
+<li>Short-focus had pure moderation by employment status (β=0.54)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a> results suggests income is associated with financial stress, regarding:
+<ul>
+<li>Income (comparing with less than 15k USD): 15-24k (β=0.02), 25-34k (β=0.02), 50-75k (β=-0.02), 75-99k (β=-0.03), 100-149k (β=-0.06), and >150k (β=-0.10)</li>
+<li>Unexpected large income drop in past 12 months (β=0.16, vs. no income drop)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>: a higher disposable income (log) was related with decreased financial stress (β=-0.10), among gamblers</li>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a>: income amount was related with increased financial stress (OR=1.15)</li>
+<li><a href=".././Articles/@yates2007" class="internal internal alias" data-slug="Articles/@yates2007">@yates2007</a> showed lower income (vs. quintile 5) was associated with increased financial stress: quintile 1 (OR=9.58), quintile 2 (OR=6.12), quintile 3 (OR=4.14), quintile 4 (OR=2.64)</li>
+<li><a href=".././Articles/@jeworrek2025" class="internal internal alias" data-slug="Articles/@jeworrek2025">@jeworrek2025</a> found income >6k€ (vs. &lt;1.5k) was related to decreased financial stress (b=-1.0)</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a>: income amount was inversely related to financial stress (b=-0.075)</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>: low-income households (vs. upper-income) have increased financial stress (OR=11.21)</li>
+</ul>
+<h4 id="savings-buffer">Savings buffer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#savings-buffer" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a> found having savings buffer offered considerable protection against financial stress:
+<ul>
+<li>For higher-level construct (β=-0.65)</li>
+<li>And for the components
+<ul>
+<li>Money shortage (β=-0.59)</li>
+<li>Lack of control (β=-0.59)</li>
+<li>Financial worries (β=-0.61)</li>
+<li>Short-focus (β=-0.30)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a>: not having emergency savings (vs. having) was related to increased financial stress (b=0.97)</li>
+</ul>
+<h4 id="job-insecurity">Job insecurity<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#job-insecurity" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@choi2020" class="internal internal alias" data-slug="Articles/@choi2020">@choi2020</a>: increased job insecurity was related both directly with increased financial stress (β=0.31), and indirectly, mediated by financial well-being (β=0.04)</li>
+</ul>
+<h4 id="employment-status">Employment status<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#employment-status" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>: no employment (compared to retirement, part time, and full time jobs) is related to greater financial stress (OR=1.55)</li>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a>: occupation was associated with decreased financial stress, adjusting for sociodemographic and health variables: professional workers (OR=0.81), and white-collars (OR=0.65), in comparison to unemployed adults</li>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>, controlling for sociodemographic characteristics: working status (vs. not working) was related with increased financial stress (β=0.06)</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a>, adjusting by demographic and personal variables, employment status of the head of the household was associated with financial stress:
+<ul>
+<li>Full-time job (OR=0.73), part-time job (OR=0.81), and unemployed (OR=2.22), compared to retired/not in the labor force</li>
+</ul>
+</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed full-time employment (vs. other) was associated with financial stress in financial hardship (β=-0.23) presentation</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a>: compared to full-time job, being retired was protective against different levels of debt stress:
+<ul>
+<li>Little debt stress (OR=0.53)</li>
+<li>Some debt stress (OR=0.38)</li>
+<li>Quite a bit of debt stress (OR=0.27)</li>
+<li>Great debt stress (OR=0.17)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a> found employment status to be associated with financial stress (comparing with full-time worker):
+<ul>
+<li>Self-employed (β=-0.02)</li>
+<li>Part-time worker (β=-0.03)</li>
+<li>Homemaker (β=-0.04)</li>
+<li>Student (β=-0.03)</li>
+<li>Disabled (β=0.01)</li>
+<li>Retired (β=-0.15)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>: being employed (vs. not employed) is protective against financial stress (β=-0.07), among gamblers</li>
+<li><a href=".././Articles/@yates2007" class="internal internal alias" data-slug="Articles/@yates2007">@yates2007</a>: having a job (vs. unemployed) predicted decreased financial stress (OR=0.60)</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a>: being employed (vs. unemployed) was related to increased financial stress (b=0.17)</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>: being unemployed (vs. employed) led to increased odds of suffering from financial stress (OR=3.06)</li>
+</ul>
+<h4 id="education">Education<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#education" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>: incidence of financial stress (OR=1.32) is higher for households where the income-earner has &lt;12 years of education</li>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a>: adults with college degree (vs. less than high school) have decreased risk of reporting financial stress (OR=0.68), adjusting for sociodemographic factors and health variables</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a>: households in which the head had a degree or higher suffered less financial stress (OR=0.79), compared to lower educational level</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed >12y of education (vs. &lt;12y) were associated with financial stress in different presentations:
+<ul>
+<li>For any financial stress (β=0.04)</li>
+<li>For cashflow problems stress (β=0.01)</li>
+<li>For financial hardship (β=0.06)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a>: compared high-school or less, being undergraduate is related to increased debt stress (vs. no debt stress):
+<ul>
+<li>Some debt stress (OR=1.33)</li>
+<li>Quite a bit of debt stress (OR=1.56)</li>
+<li>Great debt stress (OR=1.72)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a> showed education level predicted financial stress severity:
+<ul>
+<li>For high-order construct (vs. highest level):
+<ul>
+<li>Primary school (β=-0.37)</li>
+<li>Pre-vocational (β=-0.38)</li>
+<li>Senior general secondary (β=-0.29)</li>
+<li>Pre-university (β=-0.37)</li>
+<li>Secondary vocational education (β=-0.34)</li>
+</ul>
+</li>
+<li>For money shortage (vs. highest level): primary school (β=-0.23)</li>
+<li>For lack of control (vs. highest level):
+<ul>
+<li>Primary school (β=-0.43)</li>
+<li>Pre-vocational (β=-0.36)</li>
+<li>Pre-university (β=-0.31)</li>
+<li>Secondary vocational education (β=-0.30)</li>
+</ul>
+</li>
+<li>For worries (vs. highest level):
+<ul>
+<li>Pre-vocational (β=-0.32)</li>
+<li>Senior general secondary (β=-0.31)</li>
+<li>Pre-university (β=-0.34)</li>
+<li>Secondary vocational education (β=-0.32)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a> found a relationship between education levels and financial stress (comparing to high school diploma or lower):
+<ul>
+<li>Undergraduate (β=0.04)</li>
+<li>Bachelor degree (β=0.03)</li>
+<li>Post-bachelor degree (β=0.03)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a> results suggest higher education leads to decreased financial stress (vs. &lt; year 11), among gamblers:
+<ul>
+<li>Certificate (β=0.04)</li>
+<li>Bachelor (β=-0.03)</li>
+<li>Graduate diploma (β=-0.01)</li>
+<li>Postgraduate (β=-0.02)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a> found the number of years in college was proportionally related with financial stress severity:
+<ul>
+<li>2 years (vs. 1 year) had lower financial stress (b=-0.07)</li>
+<li>
+<blockquote>
+<p>5 years (vs. 1 year) had very low financial stress (b=-0.20)</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a>: high school or less (vs. some college) led to decreased financial stress (b=-0.17)</li>
+</ul>
+<h4 id="tenure">Tenure<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#tenure" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a> found that private renters (compared to public rental, homeowners, purchaser, and other) had higher financial stress (OR=6.35)</li>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>, controlling for demographic and personal variables: lagged annual rent costs predicted both bill-paying difficulty (OR=1.28) and ongoing financial strain (OR=1.30) among older adults</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a>, adjusting by demographic and personal variables, housing tenure by:
+<ul>
+<li>Outright owning was related with decreased financial stress (OR=0.87)</li>
+<li>Mortgage led to increased financial stress (OR=1.15)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>: being a outright homeowner (vs. other) is a protective factor against financial stress (β=-0.13), among gamblers</li>
+<li><a href=".././Articles/@yates2007" class="internal internal alias" data-slug="Articles/@yates2007">@yates2007</a>: being a private (OR=7.98) or public renter (OR=7.43) was related to increased financial stress (compared to outright owners)</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>: homeowners (vs. renters) have increased odds of financial stress (OR=4.12)</li>
+</ul>
+<h4 id="household-composition">Household composition<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#household-composition" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>: sole parents with dependent child suffer greater financial stress (OR=1.75) than other family conformation</li>
+<li><a href=".././Articles/@breunig2019" class="internal internal alias" data-slug="Articles/@breunig2019">@breunig2019</a> found, for Indigenous Australians, that household with children (compared to those without) have increased financial stress (OR=43.8), although this relationship is moderated by income</li>
+<li><a href=".././Articles/@breunig2019" class="internal internal alias" data-slug="Articles/@breunig2019">@breunig2019</a> found that:
+<ul>
+<li>For non-Indigenous Australians: log(household size) predicted household financial stress (OR=1.47), moderated by partnership (OR=1.84)</li>
+<li>For Indigenous Australians: increased log(household size) led to increased household financial stress (OR=2.07), moderated by mortgage debt (OR=0.74)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>, controlling for demographic and personal variables: lagged number of household members predicted bill-paying difficulty (OR=1.13) and ongoing financial strain (OR=1.16) among older adults</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a>, adjusting by demographic and personal variables, numbers of children and adults were associated with financial stress:
+<ul>
+<li>2 adults (OR=0.69), 3 adults (OR=1.18). 4 adults (OR=1.78), compared to 1 adult in the house</li>
+<li>1 child (OR=0.95), 2 children (OR=1.17), 3 children (OR=1.41), compared to no child in the house</li>
+<li>Single parents suffered with increased financial stress (OR=1.5), compared to other than couples and lone person</li>
+</ul>
+</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed number of children was associated with financial stress in different presentations:
+<ul>
+<li>For any financial stress (β=0.10)</li>
+<li>For cashflow problems stress (β=0.10)</li>
+<li>For financial hardship (β=0.07)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a> showed that:
+<ul>
+<li>Compared no child in the household, having children predicted some debt stress vs. no debt stress (OR=1.43)</li>
+<li>Number of residents in household increased debt stress (vs. no debt stress), on:
+<ul>
+<li>Some debt stress (OR=1.10)</li>
+<li>Quite a bit of debt stress (OR=1.16)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a> found household size was inversely related to financial stress, for:
+<ul>
+<li>Higher-order construct (β=-0.05)</li>
+<li>Worries domain (β=-0.06)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a>: having dependent child in the household was associated with financial stress (β=0.05)</li>
+<li><a href=".././Articles/@dunn2016" class="internal internal alias" data-slug="Articles/@dunn2016">@dunn2016</a>: having children was related with increased debt stress (b=0.17)</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>: having children is associated with financial stress (β=0.08), among gamblers’ households</li>
+<li><a href=".././Articles/@yates2007" class="internal internal alias" data-slug="Articles/@yates2007">@yates2007</a>: sole parents were more likely to experience financial stress compared to couples without child (OR=4.77)</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a> showed household composition plays an important role on financial stress:
+<ul>
+<li>Having a non-primary earner decreases household financial stress (b=-0.49)</li>
+<li>Having at least one child increases household financial stress (b=0.20)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>: single women (vs. married) as household head have increased odds of financial stress (OR=1.89)</li>
+</ul>
+<h4 id="depression">Depression<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#depression" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@guan2022" class="internal internal alias" data-slug="Articles/@guan2022">@guan2022</a>: individuals with mental health problems are more likely to experience financial stress</li>
+</ul>
+<h4 id="anxiety">Anxiety<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#anxiety" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a>: among gamblers, anxiety was related with increased financial stress (OR=1.16)</li>
+</ul>
+<h4 id="substance-abuse">Substance abuse<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#substance-abuse" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>:
+<ul>
+<li>households in which members used money to buy alcohol had marginally higher financial stress (OR=1.01)</li>
+<li>households in which members used money to buy tobacco had higher financial stress (OR=1.04)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a> suggested quitters (compared to smokers) have significantly less financial stress (OR=0.75), adjusting for sociodemographic factors and health variables</li>
+</ul>
+<h4 id="self-concept">Self-concept<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#self-concept" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a>: being optimistic about future finances predicted decreased financial stress (OR=0.82)</li>
+<li><a href=".././Articles/@mansor2022" class="internal internal alias" data-slug="Articles/@mansor2022">@mansor2022</a> controversial result: self-confident individuals (internal locus of control) are more likely to experience financial stress (β=0.28), controlled by financial behavior, financial knowledge, financial well-being, debt and income</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a>: increased financial self-efficacy led to decreased odds of increased financial stress (b=-0.17), moderated by savings buffer (b=0.02)</li>
+</ul>
+<h4 id="financial-literacy">Financial literacy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#financial-literacy" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>: both objective (β=-0.06) and subjective (β=-0.1) financial knowledge scores were associates with decreased financial stress</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed financial literacy was associated with financial stress in different presentations:
+<ul>
+<li>For any financial stress (β=-0.04), in which high financial literacy (vs. moderate) is related with increased effect (β=-0.13)</li>
+<li>For cashflow problems stress (β=-0.04), in which high financial literacy (vs. moderate) is related with increased effect (β=-0.12)</li>
+<li>For financial hardship (β=-0.05), in which high financial literacy (vs. moderate) is related with increased effect (β=-0.14)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@xiao2022" class="internal internal alias" data-slug="Articles/@xiao2022">@xiao2022</a> found that financial capability was a strong protector against financial stress (β=-0.31)</li>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a> showed financial literacy was related to financial stress:
+<ul>
+<li>Knowing about compound interest (OR=1.40)</li>
+<li>Perceived financial literacy (OR=0.69)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a>: higher scores on financial socialization was related with decreased financial stress (b=-0.03)</li>
+</ul>
+<h4 id="financial-well-being">Financial well-being<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#financial-well-being" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@choi2020" class="internal internal alias" data-slug="Articles/@choi2020">@choi2020</a>: increased financial well-being led to decreased financial stress (β=-0.11), moderated by income (β=0.25), controlled by employment status</li>
+<li><a href=".././Articles/@mejiacordova2017" class="internal internal alias" data-slug="Articles/@mejiacordova2017">@mejiacordova2017</a>: increased financial well-being was elated to decreased financial stress (β=-0.60)</li>
+</ul>
+<h4 id="financial-behavior">Financial behavior<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#financial-behavior" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@mansor2022" class="internal internal alias" data-slug="Articles/@mansor2022">@mansor2022</a>: positive financial behavior was associated with decreased financial stress (β=-0.15)</li>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a> suggested two financial behaviors related with financial stress:
+<ul>
+<li>Self-reported properly manage of finances (OR=0.67)</li>
+<li>Cashflow problems (OR=1.96)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>: being financially resilient is a protective factor against financial stress (β=-0.36), adjusted by gambling severity and socioeconomic controls</li>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a>: regularly spending more than one’s current saved money (through credit card or borrowing) was related to increased financial stress (OR=1.96)</li>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a> found different financial behaviors related with financial stress, among gamblers:
+<ul>
+<li>Perceived risk tolerance was related with decreased financial stress (OR=0.49)</li>
+<li>Self-control with expenditures (OR=0.85)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@danahy2024" class="internal internal alias" data-slug="Articles/@danahy2024">@danahy2024</a> found both positive (b=0.09) and negative (b=0.12) financial behaviors led to increased financial stress:
+<ul>
+<li>While negative financial behaviors were mediated by savings buffer (b=-0.01)</li>
+</ul>
+</li>
+</ul>
+<h4 id="general-physical-health">General physical health<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#general-physical-health" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a>: positively self-rated health led to decreased financial stress (OR=0.81), adjusting for sociodemographic factors and health variables</li>
+<li><a href=".././Articles/@loibl2022" class="internal internal alias" data-slug="Articles/@loibl2022">@loibl2022</a>, controlling for demographic and personal variables: lagged self-rated health protected against bill-paying difficulty (OR=0.76) and ongoing financial strain (OR=0.75) among older adults</li>
+<li><a href=".././Articles/@bray2001" class="internal internal alias" data-slug="Articles/@bray2001">@bray2001</a>: households including members with severe or moderate disability restrictions (compared to learning restrictions and health-unrelated disabilities) have higher odds of financial stress (OR=1.78)</li>
+<li><a href=".././Articles/@phillips2022" class="internal internal alias" data-slug="Articles/@phillips2022">@phillips2022</a>: households including at least one person with a disability or a long term health condition have increased odds of financial stress (OR=1.39), compared to those without any condition</li>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed having health conditions (vs. not having) was associated with financial stress in different presentations:
+<ul>
+<li>For any financial stress (β=0.35)</li>
+<li>For cashflow problems stress (β=0.25)</li>
+<li>For financial hardship (β=0.36)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a>: having long-term illness or disability predicts financial stress (β=0.08) , among gamblers</li>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a> found physical conditions was related with financial stress:
+<ul>
+<li>People in poor/fair (vs. excellent health) self-related health status have increased odds of being financially stressed (OR=11.08)</li>
+<li>People with disabilities (vs. no disability) have increased financial stress (OR=2.34)</li>
+</ul>
+</li>
+</ul>
+<h4 id="general-mental-health">General mental health<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#general-mental-health" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@warren2024" class="internal internal alias" data-slug="Articles/@warren2024">@warren2024</a>: household heads with poor/fair mental health (vs. excellent) have increased odds of financial stress (OR=10.86)</li>
+</ul>
+<h4 id="social-support">Social support<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#social-support" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@siahpush2007" class="internal internal alias" data-slug="Articles/@siahpush2007">@siahpush2007</a>: increased social support was marginally protective against financial stress (OR=0.98), adjusting for sociodemographic factors and health variables</li>
+</ul>
+<h4 id="living-location">Living location<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#living-location" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@ploszaj2024" class="internal internal alias" data-slug="Articles/@ploszaj2024">@ploszaj2024</a> showed living in regional/remote location (vs. city) was associated with financial stress in different presentations:
+<ul>
+<li>For any financial stress (β=0.12)</li>
+<li>For financial hardship (β=0.22)</li>
+</ul>
+</li>
+</ul>
+<h4 id="personality">Personality<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#personality" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@simonse2024" class="internal internal alias" data-slug="Articles/@simonse2024">@simonse2024</a>: showed conscientiousness was related to decreased financial stress through the worries domain (β=-0.08)</li>
+</ul>
+<h4 id="financial-hardship">Financial hardship<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#financial-hardship" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@park2017" class="internal internal alias" data-slug="Articles/@park2017">@park2017</a> showed financial hardship (objective indicators) indirectly predicted perceived financial stress, being fully mediated through:
+<ul>
+<li>Perception of the financial situation (β=0.14)</li>
+<li>Social support (β=0.15)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@heckman2014" class="internal internal alias" data-slug="Articles/@heckman2014">@heckman2014</a>: not having enough money to participate in most of the same activities as peers was related to increased financial stress (OR=5.4)</li>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a> found different hardships were related to financial stress, among gamblers:
+<ul>
+<li>Facing emergency expenditures (OR=1.26)</li>
+<li>Cashflow problems (OR=1.39)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@jeworrek2025" class="internal internal alias" data-slug="Articles/@jeworrek2025">@jeworrek2025</a> found high financial constraints to be related with increased financial stress (b=1.45)</li>
+<li><a href=".././Articles/@sorgente2023" class="internal internal alias" data-slug="Articles/@sorgente2023">@sorgente2023</a>: objective financial stress predicted longitudinally subjective financial stress (φ=0.35)</li>
+<li><a href=".././Articles/@sergeyev2023" class="internal internal alias" data-slug="Articles/@sergeyev2023">@sergeyev2023</a>: people in severe financial constraint are prone to have higher financial stress (b=7.32)</li>
+</ul>
+<h4 id="historical-years">Historical years<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#historical-years" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@dunn2016" class="internal internal alias" data-slug="Articles/@dunn2016">@dunn2016</a> suggested debt stress was related with economic crisis, so much so after 2008 this metric began to grow, then after 2009 it began to fall</li>
+</ul>
+<h4 id="gambling-behavior">Gambling behavior<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gambling-behavior" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@koomson2022" class="internal internal alias" data-slug="Articles/@koomson2022">@koomson2022</a> found gambling was related with increased financial stress in different forms:
+<ul>
+<li>Gambling severity score (β=0.24)</li>
+<li>Gambling risk status (β=0.19)</li>
+<li>Number of gambling activities (β=0.26)</li>
+<li>Gambling expenditure (log, β=0.28)</li>
+<li>Play with scratch tickets (β=0.01)</li>
+<li>Play with lottery games (β=-0.01)</li>
+<li>Play with poker machines (β=0.01)</li>
+<li>Play with horse-dogs bettings (β=-0.01)</li>
+<li>No effect of sports bettings, table games, poker, private betting, keno, and bingo</li>
+</ul>
+</li>
+<li><a href=".././Articles/@amonhaemanon2024" class="internal internal alias" data-slug="Articles/@amonhaemanon2024">@amonhaemanon2024</a>: gambling for economic reasons was related with increased financial stress (OR=2.5)</li>
+</ul>
+<h4 id="inflammatory-markers">Inflammatory markers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#inflammatory-markers" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@sturgeon2016" class="internal internal alias" data-slug="Articles/@sturgeon2016">@sturgeon2016</a>: patients with high inflammation (IL-6>10 pg/mL or CRP>10 mg/L) were associated with a high financial stress</li>
+</ul>
+<h4 id="country-economy">Country economy<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#country-economy" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@jeworrek2025" class="internal internal alias" data-slug="Articles/@jeworrek2025">@jeworrek2025</a> found inflation was related to financial stress:
+<ul>
+<li>High inflation concern (vs. none) was related to increased financial stress (b=2.31)</li>
+<li>High inflation expectation (vs. low) was related to increased financial stress (b=0.02)</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<h2 id="outcomes">Outcomes<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#outcomes" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h4 id="depressive-symptoms">Depressive symptoms<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#depressive-symptoms" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@guan2022" class="internal internal alias" data-slug="Articles/@guan2022">@guan2022</a> review found studies consistently report financial stress increases the risk of depression, with greater effects in low income households and individuals</li>
+<li><a href=".././Articles/@starrin2009" class="internal internal alias" data-slug="Articles/@starrin2009">@starrin2009</a>:
+<ul>
+<li>The combination of high financial stress and increased shaming experiences led to more depressive symptoms, stratified by gender: women (OR=8.9) and men (OR=16.5)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@hughes2014" class="internal internal alias" data-slug="Articles/@hughes2014">@hughes2014</a>: controlling for demographic and socio-economic variables, financial stress predicted depression severity:
+<ul>
+<li>Money problems led to more depressive symptoms, either:
+<ul>
+<li>Directly (b=1.49), effect moderated by racial identity (group evaluation; b=-1.01); and indirectly through self-esteem: varying by group evaluation level (low=1.01, mid=0.80, high=0.58), due to moderated mediation (b=0.07)</li>
+<li>Directly (b=1.37), effect moderated by racial identity (group evaluation; b=-1.08); and indirectly through mastery: varying by group evaluation level (low=1.03, mid=0.85, high=0.67), due to moderated mediation (b=0.09)</li>
+</ul>
+</li>
+<li>Financial hardship led to more depressive symptoms, either:
+<ul>
+<li>Directly (b=1.67); indirectly through self-esteem: varying by group evaluation level (low=1.11, mid=0.87, high=0.62), due to moderated mediation (b=0.09)</li>
+<li>Directly (b=2.43), effect moderated by racial identity (group evaluation; b=1.00); indirectly through family support: varying by group evaluation level (low=0.15, mid=0.10, high=0.05), due to moderated mediation (b=0.13)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@swanton2020" class="internal internal alias" data-slug="Articles/@swanton2020">@swanton2020</a> suggests debt stress (as a problem gambling mediator) leads to increased depressive symptoms (β=0.19)</li>
+</ul>
+<h4 id="financial-well-being-1">Financial well-being<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#financial-well-being-1" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@mahdzan2019" class="internal internal alias" data-slug="Articles/@mahdzan2019">@mahdzan2019</a>: financial stress is inversely related to financial well-being (β=-0.83), controlled by financial behavior, financial knowledge, internal locus of control, education, and age</li>
+<li><a href=".././Articles/@mansor2022" class="internal internal alias" data-slug="Articles/@mansor2022">@mansor2022</a>: financial stress led to decreased financial well-being (β=-0.11), controlled by financial behavior, financial knowledge, locus of control, debt and income</li>
+<li><a href=".././Articles/@fan2022" class="internal internal alias" data-slug="Articles/@fan2022">@fan2022</a> showed that financial stress was associated with decreased financial well-being (β=-0.45):
+<ul>
+<li>Mediated by long-term positive financial behavior (β=0.16) and by short-term positive financial behavior (β=-0.13)</li>
+<li>Age, race, gender, education, marital status, and income were controlled</li>
+</ul>
+</li>
+<li><a href=".././Articles/@rahman2021" class="internal internal alias" data-slug="Articles/@rahman2021">@rahman2021</a> showed financial stress predicted financial well-being, controlled by income, education, employment and socio-demographic variables:
+<ul>
+<li>Directly led to decreased financial well-being (β=-0.25)</li>
+<li>Indirectly, mediated by financial behavior, mildly decreased financial well-being (β=-0.11)</li>
+</ul>
+</li>
+</ul>
+<h4 id="psychological-well-being">Psychological well-being<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#psychological-well-being" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@bailey1998" class="internal internal alias" data-slug="Articles/@bailey1998">@bailey1998</a>: financial stress led to increased personal and work-related stress (β=0.53), controlled for work benefits and compensation-related stress</li>
+<li><a href=".././Articles/@aslund2014" class="internal internal alias" data-slug="Articles/@aslund2014">@aslund2014</a>: high financial stress in the context of low tangible support (vs. low financial stress and high support) is related with poor psychological well-being (OR=6.73 for men; OR=5.89 for woman), controlled for socioeconomic factors</li>
+<li><a href=".././Articles/@montpetit2015" class="internal internal alias" data-slug="Articles/@montpetit2015">@montpetit2015</a>, controlling for demographic and socioeconomic data:
+<ul>
+<li>Financial stress led to increased psychological well-being (β=-0.43)</li>
+<li>This relationship was moderated by neighborhood stress (β=-0.07)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@sturgeon2016" class="internal internal alias" data-slug="Articles/@sturgeon2016">@sturgeon2016</a>: financial stress predicts psychological well-being (b=-0.17)</li>
+<li><a href=".././Articles/@lindberg2021" class="internal internal alias" data-slug="Articles/@lindberg2021">@lindberg2021</a> found decreased psychological well-being among children who report financial stress:
+<ul>
+<li>Worrying about money was related with decreased chance of belonging to high affective well-being group when compared to the low well-being counterpart (OR=0.64)</li>
+<li>Worrying about money led to decreased chance of belonging to high cognitive well-being group, in comparison to the low wel-being group (OR=0.51)</li>
+</ul>
+</li>
+</ul>
+<h4 id="general-mental-health-1">General mental health<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#general-mental-health-1" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a>, controlling for socioeconomic and demographical factors, increased debt stress was related to poor-fair mental health (OR=1.51, vs. good-very good-excellent)</li>
+</ul>
+<h4 id="psychological-distress">Psychological distress<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#psychological-distress" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a>, increased debt stress was related to moderate-serious psychological distress (OR=1.63, vs. mild-none)</li>
+<li><a href=".././Articles/@wickrama2021" class="internal internal alias" data-slug="Articles/@wickrama2021">@wickrama2021</a> found that household midlife stress was longitudinally related to later life psychological distress in husbands (b=0.06)</li>
+<li><a href=".././Articles/@swanton2020" class="internal internal alias" data-slug="Articles/@swanton2020">@swanton2020</a> suggests debt stress leads (as a problem gambling mediator) to increased psychological distress (β=0.37)</li>
+<li><a href=".././Articles/@sturgeon2016" class="internal internal alias" data-slug="Articles/@sturgeon2016">@sturgeon2016</a> found financial stress was related with psychological distress:
+<ul>
+<li>Directly, increasing it (b=0.18)</li>
+<li>Indirectly, via negative interpersonal events (b=0.03) through a moderated mediation of perceived social status (b=0.06)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@taylor2017" class="internal internal alias" data-slug="Articles/@taylor2017">@taylor2017</a> found two financial stress facets that increased psychological distress, among primary caregivers:
+<ul>
+<li>Missing mortgage or rent payment (OR=5.15)</li>
+<li>Adult lost job (OR=3.77)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@wei2014" class="internal internal alias" data-slug="Articles/@wei2014">@wei2014</a>: family financial stress was related with increased mental health problems among household heads (β=0.33)</li>
+</ul>
+<h4 id="loneliness">Loneliness<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#loneliness" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@wickrama2021" class="internal internal alias" data-slug="Articles/@wickrama2021">@wickrama2021</a> showed that household midlife stress was longitudinally related to later life loneliness in husbands (b=0.05)</li>
+</ul>
+<h4 id="cognitive-impairment">Cognitive impairment<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cognitive-impairment" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@kareholt2025" class="internal internal alias" data-slug="Articles/@kareholt2025">@kareholt2025</a> found financial stress was related to worse cognitive functioning (β=0.09)</li>
+</ul>
+<h4 id="suicide">Suicide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#suicide" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@carr2018" class="internal internal alias" data-slug="Articles/@carr2018">@carr2018</a> showed financial stress among patients with gambling disorder was related with suicidal ideation or attempts:
+<ul>
+<li>Directly, OR=1.47</li>
+<li>Indirectly, mediated by familial conflict, OR=1.06</li>
+</ul>
+</li>
+</ul>
+<h4 id="anxiety-symptoms">Anxiety symptoms<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#anxiety-symptoms" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@tran2018" class="internal internal alias" data-slug="Articles/@tran2018">@tran2018</a> found financial stress predicted general anxiety:
+<ul>
+<li>Direct effect of increasing anxiety symptoms (b=0.26)</li>
+<li>This effect was moderated by:
+<ul>
+<li>Gender alone (b=0.20)</li>
+<li>Family support (b=-0.12), significant only for male students (b=-0.34)</li>
+<li>Moderated moderation on gender and family (b=0.31), significant for male students reporting low family support (b=0.30), and female for high (b=0.30) and low (b=0.33) support</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@ozyuksel2022" class="internal internal alias" data-slug="Articles/@ozyuksel2022">@ozyuksel2022</a>: financial stress as a source of stress (vs. other sources) predicted levels of anxiety (d=0.40)</li>
+</ul>
+<h4 id="general-physical-health-1">General physical health<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#general-physical-health-1" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@aslund2014" class="internal internal alias" data-slug="Articles/@aslund2014">@aslund2014</a>: high financial stress in the context of low tangible support (vs. low financial stress and high support) is related with increased psychosomatic symptoms (OR=7.45 for men; OR=5.49 for woman), controlled for socioeconomic factors</li>
+<li><a href=".././Articles/@hamilton2019" class="internal internal alias" data-slug="Articles/@hamilton2019">@hamilton2019</a>, controlling for socioeconomic and demographical factors, increased debt stress was related to poor-fair general health (OR=1.29, vs. good-very good-excellent)</li>
+<li><a href=".././Articles/@kareholt2025" class="internal internal alias" data-slug="Articles/@kareholt2025">@kareholt2025</a>, controlling for socioeconomic and demographical factors, found financial stress led to increased physical impairment:
+<ul>
+<li>Direct effect: β=0.14</li>
+<li>Mediated by:
+<ul>
+<li>Smoking status (β=0.01)</li>
+<li>Sleep disturbances (β=0.01)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href=".././Articles/@wickrama2021" class="internal internal alias" data-slug="Articles/@wickrama2021">@wickrama2021</a> found that household midlife stress was longitudinally related to later life physical health for both wives (b=0.07) and husbands (b=0.07)</li>
+<li><a href=".././Articles/@swanton2020" class="internal internal alias" data-slug="Articles/@swanton2020">@swanton2020</a> suggests debt stress leads (as a problem gambling mediator) to decreased well-being (β=-0.26)</li>
+<li><a href=".././Articles/@kosminsky2020" class="internal internal alias" data-slug="Articles/@kosminsky2020">@kosminsky2020</a> reviewed 9 studies that consistently reported positive association between financial stress measures and pain (severity, neck pain, back pain, and its interference on daily activities)</li>
+</ul>
+<h4 id="satisfaction">Satisfaction<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#satisfaction" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@bailey1998" class="internal internal alias" data-slug="Articles/@bailey1998">@bailey1998</a>: financial stress led to decreased personal and work-related satisfaction (β=-0.15), controlled for work benefits and compensation-related stress</li>
+<li><a href=".././Articles/@lazarevic2016" class="internal internal alias" data-slug="Articles/@lazarevic2016">@lazarevic2016</a>: financial stress is associated with decreased life satisfaction (b=-0.30), adjusting by age, ethnicity, sex, depressive symptoms, and religiosity</li>
+</ul>
+<h4 id="performance">Performance<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#performance" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@baker2019" class="internal internal alias" data-slug="Articles/@baker2019">@baker2019</a>: high financial stress was related to decreased 1-year GPA (β=-0.12), controlling for gender, age, race/ethnicity, first-generation status, years in college, and employment status</li>
+<li><a href=".././Articles/@joo1998" class="internal internal alias" data-slug="Articles/@joo1998">@joo1998</a>: increased financial stress led to decreased employee performance ratings by bosses (β=-0.18)</li>
+<li><a href=".././Articles/@wei2024" class="internal internal alias" data-slug="Articles/@wei2024">@wei2024</a>: financial stress can boost work performance:
+<ul>
+<li>Indirectly (b=0.17 in low exhaustion), moderated by emotional exhaustion, mediated by work engagement</li>
+</ul>
+</li>
+</ul>
+<h4 id="financial-help-seeking">Financial help-seeking<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#financial-help-seeking" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@lim2014" class="internal internal alias" data-slug="Articles/@lim2014">@lim2014</a>: increased financial stress was related with increased help-seeking behavior (OR=1.21), controlled by gender, ethnicity, class rank, and type of institution attended</li>
+</ul>
+<h4 id="substance-abuse-1">Substance abuse<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#substance-abuse-1" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@peirce1996" class="internal internal alias" data-slug="Articles/@peirce1996">@peirce1996</a> found financial stress was related with increased alcohol consumption, while controlling for sociodemographic variables:
+<ul>
+<li>Acute financial stress increased number of alcohol problems (β=0.07), mediated by tangible social support (β=-0.13)</li>
+<li>Acute financial stress reduced drinking to cope behavior when mediated by appraisal social support (β=-0.06)</li>
+<li>Acute financial stress reduced heavy drinking when mediated by tangible social support (β=-0.08)</li>
+<li>Chronic financial stress was related to increased drinking to cope behavior (β=0.10), but nerfed by belonging social support (β=-0.07)</li>
+<li>Chronic financial stress reduced heavy drinking when moderated by tangible social support (β=-0.09)</li>
+<li>Chronic financial stress reduced alcohol problems when moderated by tangible social support (β=-0.14)</li>
+</ul>
+</li>
+<li><a href=".././Articles/@serido2014" class="internal internal alias" data-slug="Articles/@serido2014">@serido2014</a> showed financial stress (through the strain domain) predicted future problematic drinking (b=0.04), controlling for socioeconomic and demographic factors</li>
+</ul>
+<h4 id="financial-behaviors">Financial behaviors<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#financial-behaviors" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@lopezalvarado2021" class="internal internal alias" data-slug="Articles/@lopezalvarado2021">@lopezalvarado2021</a>: financial stress was associated with both negative (β=0.04) and positive (β=-0.05) financial behaviors</li>
+<li><a href=".././Articles/@rahman2021" class="internal internal alias" data-slug="Articles/@rahman2021">@rahman2021</a>: high financial stress predicts negative financial behaviors (β=-0.35)</li>
+</ul>
+<h4 id="neighborhood-stress">Neighborhood stress<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#neighborhood-stress" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@montpetit2015" class="internal internal alias" data-slug="Articles/@montpetit2015">@montpetit2015</a>, controlling for demographic and socioeconomic data: financial stress increased neighborhood stress (β=0.35)</li>
+</ul>
+<h4 id="gambling-behavior-1">Gambling behavior<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#gambling-behavior-1" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@sisay2025" class="internal internal alias" data-slug="Articles/@sisay2025">@sisay2025</a> found financial stress to be an important predictor of gambling behavior severity (β=0.67)</li>
+<li><a href=".././Articles/@swanton2020" class="internal internal alias" data-slug="Articles/@swanton2020">@swanton2020</a> suggests debt stress leads (as a problem gambling mediator) to increased family gambling-related impact (β=0.18)</li>
+</ul>
+<h4 id="inflammatory-markers-1">Inflammatory markers<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#inflammatory-markers-1" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@sturgeon2016" class="internal internal alias" data-slug="Articles/@sturgeon2016">@sturgeon2016</a>: financial stress led increased systemic inflammation, as per:
+<ul>
+<li>Increased interleukin-6 levels via a complete mediation through psychological well-being (b=0.01)</li>
+<li>Increased CRP levels via a complete moderation by perceived social status (b=0.05)</li>
+</ul>
+</li>
+</ul>
+<h4 id="parenting-behavior">Parenting behavior<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#parenting-behavior" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@wei2014" class="internal internal alias" data-slug="Articles/@wei2014">@wei2014</a> found family financial stress was related with poor parenting:
+<ul>
+<li>Decreased parental school involvement (β=-0.14)</li>
+<li>Poor child rearing practice (β=-0.15)</li>
+</ul>
+</li>
+</ul>
+<h4 id="lack-of-control">Lack of control<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lack-of-control" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@spoelma2024" class="internal internal alias" data-slug="Articles/@spoelma2024">@spoelma2024</a>: financial stress was related with lack of control (b=0.36)
+<ul>
+<li>This effect was significantly higher in males (b=0.72)</li>
+</ul>
+</li>
+</ul>
+<h4 id="abusive-supervision">Abusive supervision<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#abusive-supervision" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@spoelma2024" class="internal internal alias" data-slug="Articles/@spoelma2024">@spoelma2024</a>: financial stress predicted increased abusive supervision (b=0.28), mediated by lack of control (b=0.15)</li>
+</ul>
+<h4 id="communion-striving">Communion striving<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#communion-striving" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@spoelma2024" class="internal internal alias" data-slug="Articles/@spoelma2024">@spoelma2024</a>: financial stress predicted increased communion striving (b=0.47)
+<ul>
+<li>This effect was increased only in men (b=0.54)</li>
+</ul>
+</li>
+</ul>
+<h4 id="empathic-leadership">Empathic leadership<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#empathic-leadership" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@spoelma2024" class="internal internal alias" data-slug="Articles/@spoelma2024">@spoelma2024</a>: financial stress had a significant impact on empathic leadership, through a complete mediation by communion striving (b=0.13)</li>
+</ul>
+<h4 id="absenteeism">Absenteeism<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#absenteeism" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@kim2006" class="internal internal alias" data-slug="Articles/@kim2006">@kim2006</a>: financial stress was related with increased use of work hours for personal finances (β=0.15)</li>
+<li><a href=".././Articles/@joo1998" class="internal internal alias" data-slug="Articles/@joo1998">@joo1998</a> found increased financial stress-related absenteeism in work space:
+<ul>
+<li>Increased absence rates (β=0.15)</li>
+<li>Increased use of work hours for personal finances (β=0.140)</li>
+</ul>
+</li>
+</ul>
+<h4 id="financial-well-being-2">Financial well-being<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#financial-well-being-2" class="internal internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><a href=".././Articles/@sorgente2023" class="internal internal alias" data-slug="Articles/@sorgente2023">@sorgente2023</a>: objective financial stress was related to decreased financial well-being longitudinally (φ=-0.26)</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:false,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:false}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-147" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#definitions" data-for="definitions">Definitions</a></li><li class="depth-0"><a href="#theoretical-frameworks" data-for="theoretical-frameworks">Theoretical frameworks</a></li><li class="depth-0"><a href="#measurements" data-for="measurements">Measurements</a></li><li class="depth-0"><a href="#determinants" data-for="determinants">Determinants</a></li><li class="depth-0"><a href="#outcomes" data-for="outcomes">Outcomes</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>Backlinks</h3><ul id="list-2" class="overflow"><li><a href="../Scales/ABSFSS" class="internal">ABSFSS</a></li><li><a href="../Scales/APRFSS" class="internal">APRFSS</a></li><li><a href="../Scales/DCIFS" class="internal">DCIFS</a></li><li><a href="../Scales/EEF" class="internal">EEF</a></li><li><a href="../Scales/ESECPS" class="internal">ESECPS</a></li><li><a href="../Scales/FHS" class="internal">FHS</a></li><li><a href="../Scales/FSS-CV" class="internal">FSS-CV</a></li><li><a href="../Terminology/Financial-distress" class="internal">Financial distress</a></li><li><a href="../Terminology/Macroeconomic-financial-stress" class="internal">Macroeconomic financial stress</a></li><li><a href="../Theoretical-frameworks/Ecological-systems-theory" class="internal">Ecological systems theory</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../postscript.js" type="module"></script></html>
