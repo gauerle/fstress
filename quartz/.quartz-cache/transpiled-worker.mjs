@@ -12325,7 +12325,10 @@ var __default = /* @__PURE__ */ __name((() => NotFound), "default");
 // quartz/components/ArticleTitle.tsx
 import { jsx as jsx13 } from "preact/jsx-runtime";
 var ArticleTitle = /* @__PURE__ */ __name(({ fileData, displayClass }) => {
-  const title = fileData.slug === "index" && fileData.frontmatter?.title ? fileData.frontmatter.title : fileData.slug?.split("/").pop() || fileData.slug;
+  let title = fileData.slug === "index" && fileData.frontmatter?.title ? fileData.frontmatter.title : fileData.slug?.split("/").pop() || fileData.slug;
+  if (title && fileData.slug !== "index") {
+    title = title.replace(/-/g, " ");
+  }
   if (title) {
     return /* @__PURE__ */ jsx13("h1", { class: classNames(displayClass, "article-title"), children: title });
   } else {
@@ -13646,7 +13649,7 @@ var Backlinks_default = /* @__PURE__ */ __name(((opts) => {
     }
     return /* @__PURE__ */ jsxs18("div", { class: classNames(displayClass, "backlinks"), children: [
       /* @__PURE__ */ jsx27("h3", { children: i18n(cfg.locale).components.backlinks.title }),
-      /* @__PURE__ */ jsx27(OverflowList2, { children: backlinkFiles.length > 0 ? backlinkFiles.map((f) => /* @__PURE__ */ jsx27("li", { children: /* @__PURE__ */ jsx27("a", { href: resolveRelative(fileData.slug, f.slug), class: "internal", children: f.frontmatter?.title }) })) : /* @__PURE__ */ jsx27("li", { children: i18n(cfg.locale).components.backlinks.noBacklinksFound }) })
+      /* @__PURE__ */ jsx27(OverflowList2, { children: backlinkFiles.length > 0 ? backlinkFiles.map((f) => /* @__PURE__ */ jsx27("li", { children: /* @__PURE__ */ jsx27("a", { href: resolveRelative(fileData.slug, f.slug), class: "internal", children: f.slug?.split("/").pop()?.replace(/-/g, " ") || f.slug }) })) : /* @__PURE__ */ jsx27("li", { children: i18n(cfg.locale).components.backlinks.noBacklinksFound }) })
     ] });
   }, "Backlinks");
   Backlinks.css = backlinks_default;

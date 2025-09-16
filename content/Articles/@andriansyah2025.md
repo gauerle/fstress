@@ -1,5 +1,5 @@
 ---
-title: "Financial Stress Studies: What Can We Learn From the Latest Trends? SDG Improvement Efford"
+title: "Financial Stress Studies: What Can We Learn From the Latest Trends? SDG Improvement Effort"
 authors: Eka Andriansyah,  , Jun Surjanti, Retno Mustika Dewi, Ardhita Eko Ginanjar, Prattana Srisuk
 year: 2025
 citekey: andriansyah2025
@@ -23,7 +23,7 @@ tags:
   - source
 ---
 
-# Financial Stress Studies: What Can We Learn From the Latest Trends? SDG Improvement Efford
+# Financial Stress Studies: What Can We Learn From the Latest Trends? SDG Improvement Effort
 
 %% begin summary %%
 ## Thoughts

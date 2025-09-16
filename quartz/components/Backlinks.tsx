@@ -36,7 +36,7 @@ export default ((opts?: Partial<BacklinksOptions>) => {
             backlinkFiles.map((f) => (
               <li>
                 <a href={resolveRelative(fileData.slug!, f.slug!)} class="internal">
-                  {f.frontmatter?.title}
+                  {f.slug?.split('/').pop()?.replace(/-/g, ' ') || f.slug}
                 </a>
               </li>
             ))
