@@ -1,5 +1,6 @@
 ---
-title: A review of financial stress literature
+aliases:
+  - index
 ---
 
 
