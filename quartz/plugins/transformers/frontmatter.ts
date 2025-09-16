@@ -18,8 +18,23 @@ function processWikilinks(value: any, allSlugs: FullSlug[]): any {
       // Clean the target - remove .md extension if present
       const cleanTarget = target.replace(/\.md$/i, '')
       
-      // Generate slug using Quartz's slugifyFilePath
-      const targetSlug = slugifyFilePath((cleanTarget + ".md") as FilePath)
+      // Generate base slug
+      const baseSlug = slugifyFilePath((cleanTarget + ".md") as FilePath)
+      
+      // Search for the actual file in allSlugs
+      // Look for exact match first, then partial matches
+      let actualSlug = allSlugs.find(slug => slug === baseSlug)
+      
+      if (!actualSlug) {
+        // Look for files that end with this slug (in subdirectories)
+        actualSlug = allSlugs.find(slug => 
+          slug.endsWith('/' + baseSlug) || 
+          slug.toLowerCase() === baseSlug.toLowerCase()
+        )
+      }
+      
+      // Use the found slug or fallback to base slug
+      const targetSlug = actualSlug || baseSlug
       
       // Use the same link format as Quartz's internal links
       // Add the 'internal' class so Quartz's SPA router handles it
