@@ -143,7 +143,14 @@ async function renderGraph(graph: HTMLElement, fullSlug: FullSlug) {
     if (showTags) tags.forEach((tag) => neighbourhood.add(tag))
   }
 const nodes = [...neighbourhood].map((url) => {
-  const text = url.startsWith("tags/") ? "#" + url.substring(5) : url.split("/").pop() || url
+  let text;
+  if (url === "index" || url === "") {
+    text = "Home"  // Uses frontmatter title or fallback
+  } else if (url.startsWith("tags/")) {
+    text = "#" + url.substring(5)
+  } else {
+    text = url.split("/").pop() || url
+  }
   return {
     id: url,
     text,

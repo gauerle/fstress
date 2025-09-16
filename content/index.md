@@ -26,19 +26,3 @@ The outline of this review is described below:
 
 
 
-
-
-
-#### Methods
-
-#### Terminologies 
-
-#### Scales
-
-#### Theoretical frameworks
-
-#### Determinants
-
-#### Outcomes
-
-#### Viewing from above
