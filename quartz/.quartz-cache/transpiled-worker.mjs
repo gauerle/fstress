@@ -10368,6 +10368,41 @@ var FrontMatter = /* @__PURE__ */ __name((userOpts) => {
             if (socialImage) data.socialImage = socialImage;
             const uniqueSlugs = [...new Set(allSlugs)];
             allSlugs.splice(0, allSlugs.length, ...uniqueSlugs);
+            const links = [];
+            function extractWikilinks(value) {
+              if (typeof value === "string") {
+                const matches = value.matchAll(/\[\[([^\]]+)\]\]/g);
+                for (const match of matches) {
+                  const parts = match[1].split("|");
+                  const target = parts.length > 1 ? parts[1].trim() : parts[0].trim();
+                  const cleanTarget = target.replace(/\.md$/i, "");
+                  const baseSlug = slugifyFilePath(cleanTarget + ".md");
+                  let actualSlug = allSlugs.find((slug) => slug === baseSlug);
+                  if (!actualSlug) {
+                    actualSlug = allSlugs.find(
+                      (slug) => slug.endsWith("/" + baseSlug) || slug.toLowerCase() === baseSlug.toLowerCase()
+                    );
+                  }
+                  if (actualSlug) {
+                    links.push(actualSlug);
+                  }
+                }
+              } else if (Array.isArray(value)) {
+                value.forEach((item) => extractWikilinks(item));
+              } else if (value && typeof value === "object") {
+                Object.values(value).forEach((v) => extractWikilinks(v));
+              }
+            }
+            __name(extractWikilinks, "extractWikilinks");
+            for (const key in data) {
+              if (key !== "title" && key !== "tags" && key !== "aliases") {
+                extractWikilinks(data[key]);
+              }
+            }
+            if (!file.data.frontmatterLinks) {
+              file.data.frontmatterLinks = [];
+            }
+            file.data.frontmatterLinks.push(...links);
             for (const key in data) {
               if (key !== "title" && key !== "tags" && key !== "aliases") {
                 data[key] = processWikilinks(data[key], allSlugs);
@@ -10762,6 +10797,10 @@ var CrawlLinks = /* @__PURE__ */ __name((userOpts) => {
                 }
               }
             });
+            const frontmatterLinks = file.data.frontmatterLinks || [];
+            for (const link of frontmatterLinks) {
+              outgoing.add(link);
+            }
             file.data.links = [...outgoing];
           };
         }

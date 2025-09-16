@@ -3,7 +3,7 @@ import remarkFrontmatter from "remark-frontmatter"
 import { QuartzTransformerPlugin } from "../types"
 import yaml from "js-yaml"
 import toml from "toml"
-import { FilePath, FullSlug, getFileExtension, slugifyFilePath, slugTag } from "../../util/path"
+import { FilePath, FullSlug, SimpleSlug, getFileExtension, slugifyFilePath, slugTag } from "../../util/path"
 import { QuartzPluginData } from "../vfile"
 import { i18n } from "../../i18n"
 
@@ -167,6 +167,51 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
             const uniqueSlugs = [...new Set(allSlugs)]
             allSlugs.splice(0, allSlugs.length, ...uniqueSlugs)
 
+            // Extract links for graph before processing
+            const links: FullSlug[] = []
+            function extractWikilinks(value: any): void {
+              if (typeof value === 'string') {
+                const matches = value.matchAll(/\[\[([^\]]+)\]\]/g)
+                for (const match of matches) {
+                  const parts = match[1].split('|')
+                  const target = parts.length > 1 ? parts[1].trim() : parts[0].trim()
+                  const cleanTarget = target.replace(/\.md$/i, '')
+                  const baseSlug = slugifyFilePath((cleanTarget + ".md") as FilePath)
+                  
+                  // Find actual slug in allSlugs
+                  let actualSlug = allSlugs.find(slug => slug === baseSlug)
+                  if (!actualSlug) {
+                    actualSlug = allSlugs.find(slug => 
+                      slug.endsWith('/' + baseSlug) || 
+                      slug.toLowerCase() === baseSlug.toLowerCase()
+                    )
+                  }
+                  
+                  if (actualSlug) {
+                    links.push(actualSlug)
+                  }
+                }
+              } else if (Array.isArray(value)) {
+                value.forEach(item => extractWikilinks(item))
+              } else if (value && typeof value === 'object') {
+                Object.values(value).forEach(v => extractWikilinks(v))
+              }
+            }
+
+            // Extract links from frontmatter
+            for (const key in data) {
+              if (key !== 'title' && key !== 'tags' && key !== 'aliases') {
+                extractWikilinks(data[key])
+              }
+            }
+
+            // Store frontmatter links in a custom property
+            // Don't touch file.data.links - let CrawlLinks handle that
+            if (!file.data.frontmatterLinks) {
+              file.data.frontmatterLinks = []
+            }
+            file.data.frontmatterLinks.push(...links)
+
             // Process wikilinks in all frontmatter properties
             for (const key in data) {
               if (key !== 'title' && key !== 'tags' && key !== 'aliases') {
@@ -186,6 +231,7 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
 declare module "vfile" {
   interface DataMap {
     aliases: FullSlug[]
+    frontmatterLinks: FullSlug[]
     frontmatter: { [key: string]: unknown } & {
       title: string
     } & Partial<{

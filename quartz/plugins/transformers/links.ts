@@ -156,7 +156,10 @@ export const CrawlLinks: QuartzTransformerPlugin<Partial<Options>> = (userOpts) 
                 }
               }
             })
-
+            const frontmatterLinks = (file.data as any).frontmatterLinks || []
+            for (const link of frontmatterLinks) {
+              outgoing.add(link)
+            }
             file.data.links = [...outgoing]
           }
         },
