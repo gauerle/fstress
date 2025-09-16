@@ -1,8 +1,6 @@
 ---
 title: A review of financial stress literature
 ---
-
-
 > [!example] How to navigate in this website
 > Hey, Altay! This is the review. I compiled it into a website to make it more didactic. Also, I'm using English to keep inline with the nomenclature discussion we'll enter soon.
 >  
@@ -18,11 +16,3 @@ The outline of this review is described below:
 - [[Operationalizing financial stress]]
 - [[Determinants of financial stress]]
 - [[Outcomes of financial stress]]
-
-
-
-
-
-
-
-
