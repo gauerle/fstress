@@ -14914,8 +14914,8 @@ var NotFoundPage = /* @__PURE__ */ __name(() => {
 // quartz.config.ts
 var config = {
   configuration: {
-    pageTitle: "Gauerle",
-    pageTitleSuffix: " \xB7 Gauerle",
+    pageTitle: "gauerle",
+    pageTitleSuffix: " \xB7 gauerle",
     enableSPA: true,
     enablePopovers: false,
     analytics: {
@@ -15017,7 +15017,8 @@ var config = {
       Favicon(),
       NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
-      CustomOgImages()
+      CustomOgImages(),
+      AliasRedirects()
     ]
   }
 };

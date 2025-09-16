@@ -1,6 +1,5 @@
 ---
-aliases:
-  - index
+alias: "index"
 ---
 
 

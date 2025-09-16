@@ -7,8 +7,8 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "Gauerle",
-    pageTitleSuffix: " · Gauerle",
+    pageTitle: "gauerle",
+    pageTitleSuffix: " · gauerle",
     enableSPA: true,
     enablePopovers: false,
     analytics: {
@@ -97,6 +97,7 @@ const config: QuartzConfig = {
       Plugin.NotFoundPage(),
       // Comment out CustomOgImages to speed up build time
       Plugin.CustomOgImages(),
+      Plugin.AliasRedirects(),
     ],
   },
 }
