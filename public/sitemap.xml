@@ -1,7 +1,4 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://quartz.gauerle.me/A-review-of-financial-stress-literature</loc>
-    <lastmod>2025-09-16T00:42:57.000Z</lastmod>
-  </url><url>
     <loc>https://quartz.gauerle.me/Articles/@adams2016</loc>
     <lastmod>2025-09-16T00:18:27.000Z</lastmod>
   </url><url>
@@ -413,6 +410,9 @@
     <loc>https://quartz.gauerle.me/Articles/@zafar2013</loc>
     <lastmod>2025-09-16T00:18:27.000Z</lastmod>
   </url><url>
+    <loc>https://quartz.gauerle.me/Media/Figure-1-%C2%B7-Count-of-published-papers-by-year</loc>
+    <lastmod>2025-09-16T03:05:20.000Z</lastmod>
+  </url><url>
     <loc>https://quartz.gauerle.me/Scales/ABSFSS</loc>
     <lastmod>2025-09-16T00:18:27.000Z</lastmod>
   </url><url>
@@ -648,8 +648,5 @@
     <lastmod>2025-09-16T00:18:27.000Z</lastmod>
   </url><url>
     <loc>https://quartz.gauerle.me/</loc>
-    <lastmod>2025-09-16T00:42:57.000Z</lastmod>
-  </url><url>
-    <loc>https://quartz.gauerle.me/test</loc>
-    <lastmod>2025-09-16T00:18:27.000Z</lastmod>
+    <lastmod>2025-09-16T03:05:20.000Z</lastmod>
   </url></urlset>

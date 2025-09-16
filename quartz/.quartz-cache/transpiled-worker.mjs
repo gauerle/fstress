@@ -12325,7 +12325,7 @@ var __default = /* @__PURE__ */ __name((() => NotFound), "default");
 // quartz/components/ArticleTitle.tsx
 import { jsx as jsx13 } from "preact/jsx-runtime";
 var ArticleTitle = /* @__PURE__ */ __name(({ fileData, displayClass }) => {
-  const title = fileData.slug?.split("/").pop() || fileData.slug;
+  const title = fileData.slug === "index" && fileData.frontmatter?.title ? fileData.frontmatter.title : fileData.slug?.split("/").pop() || fileData.slug;
   if (title) {
     return /* @__PURE__ */ jsx13("h1", { class: classNames(displayClass, "article-title"), children: title });
   } else {
