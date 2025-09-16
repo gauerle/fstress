@@ -10,8 +10,22 @@ import { i18n } from "../../i18n"
 function processWikilinks(value: any, allSlugs: FullSlug[]): any {
   if (typeof value === 'string') {
     return value.replace(/\[\[([^\]]+)\]\]/g, (match, link) => {
-      const slug = slugifyFilePath((link + ".md") as FilePath)
-      return `<a href="/${slug}">${link}</a>`
+      // Handle potential pipe syntax [[display|target]]
+      const parts = link.split('|')
+      const target = parts.length > 1 ? parts[1].trim() : parts[0].trim()
+      const display = parts[0].trim()
+      
+      // Generate slug from the target
+      const slug = slugifyFilePath((target + ".md") as FilePath)
+      
+      // Check if slug exists in allSlugs for validation
+      const slugExists = allSlugs.some(s => s === slug || s === target)
+      
+      // Use the slug directly without leading slash if it doesn't exist
+      // This helps with relative paths in GitHub Pages
+      const href = slugExists ? slug : slug
+      
+      return `<a href="${href}">${display}</a>`
     })
   } else if (Array.isArray(value)) {
     return value.map(item => processWikilinks(item, allSlugs))
@@ -136,11 +150,11 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
 
             if (socialImage) data.socialImage = socialImage
 
-            // Remove duplicate slugs
+            // Remove duplicate slugs BEFORE processing wikilinks
             const uniqueSlugs = [...new Set(allSlugs)]
             allSlugs.splice(0, allSlugs.length, ...uniqueSlugs)
 
-            // Process wikilinks in all frontmatter properties
+            // Process wikilinks in all frontmatter properties with updated allSlugs
             for (const key in data) {
               if (key !== 'title' && key !== 'tags' && key !== 'aliases') {
                 data[key] = processWikilinks(data[key], allSlugs)
