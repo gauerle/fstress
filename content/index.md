@@ -2,7 +2,7 @@
 title: A review of financial stress literature
 ---
 > [!example] How to navigate in this website
-> Hey, Altay! This is the review. I compiled it into a website to make it more didactic. Also, I'm using English to keep inline with the nomenclature discussion we'll enter soon.
+> Hey, Altay! Finally, the review is done. I compiled everything into a website to make it more didactic. Also, I'm using English because further we'll discuss a topic on nomenclature, and I'd like to keep language uniformity across the whole text.
 >  
 > This website works just like Wikipedia. By clicking over hyperlinked words, you open up them to explore the content. You can return back using the 'Backlinks section' at the right lane of the page or the navigation tab over the page title. 
 

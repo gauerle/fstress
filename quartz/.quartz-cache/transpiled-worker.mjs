@@ -13125,7 +13125,7 @@ PageTitle.css = `
 }
 
 .sidebar-logo {
-  width: 120px;
+  width: 200px;
   height: auto;
   border-radius: 8px;
 }
