@@ -10259,7 +10259,14 @@ function processWikilinks(value, allSlugs) {
       const target = parts.length > 1 ? parts[1].trim() : parts[0].trim();
       const display = parts[0].trim();
       const cleanTarget = target.replace(/\.md$/i, "");
-      const targetSlug = slugifyFilePath(cleanTarget + ".md");
+      const baseSlug = slugifyFilePath(cleanTarget + ".md");
+      let actualSlug = allSlugs.find((slug) => slug === baseSlug);
+      if (!actualSlug) {
+        actualSlug = allSlugs.find(
+          (slug) => slug.endsWith("/" + baseSlug) || slug.toLowerCase() === baseSlug.toLowerCase()
+        );
+      }
+      const targetSlug = actualSlug || baseSlug;
       return `<a href="/${targetSlug}" class="internal">${display}</a>`;
     });
   } else if (Array.isArray(value)) {
