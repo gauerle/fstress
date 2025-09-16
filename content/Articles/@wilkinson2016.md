@@ -36,7 +36,6 @@ Connects with:
 [[@szanton2010]]
 [[@kahn2006]]
 [[@elder1988]]
-[[]]
 %% end summary %%
 
 ---
