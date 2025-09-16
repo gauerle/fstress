@@ -1,3 +1,3 @@
 ---
-redirect: /A-review-of-financial-stress-literature
+alias: A review of financial stress literature
 ---
