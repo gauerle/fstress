@@ -10255,8 +10255,12 @@ var i18n = /* @__PURE__ */ __name((locale) => TRANSLATIONS[locale ?? defaultTran
 function processWikilinks(value, allSlugs) {
   if (typeof value === "string") {
     return value.replace(/\[\[([^\]]+)\]\]/g, (match, link) => {
-      const slug = slugifyFilePath(link + ".md");
-      return `<a href="/${slug}">${link}</a>`;
+      const parts = link.split("|");
+      const target = parts.length > 1 ? parts[1].trim() : parts[0].trim();
+      const display = parts[0].trim();
+      const cleanTarget = target.replace(/\.md$/i, "");
+      const targetSlug = slugifyFilePath(cleanTarget + ".md");
+      return `<a href="/${targetSlug}" class="internal">${display}</a>`;
     });
   } else if (Array.isArray(value)) {
     return value.map((item) => processWikilinks(item, allSlugs));

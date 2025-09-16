@@ -15,17 +15,15 @@ function processWikilinks(value: any, allSlugs: FullSlug[]): any {
       const target = parts.length > 1 ? parts[1].trim() : parts[0].trim()
       const display = parts[0].trim()
       
-      // Generate slug from the target
-      const slug = slugifyFilePath((target + ".md") as FilePath)
+      // Clean the target - remove .md extension if present
+      const cleanTarget = target.replace(/\.md$/i, '')
       
-      // Check if slug exists in allSlugs for validation
-      const slugExists = allSlugs.some(s => s === slug || s === target)
+      // Generate slug using Quartz's slugifyFilePath
+      const targetSlug = slugifyFilePath((cleanTarget + ".md") as FilePath)
       
-      // Use the slug directly without leading slash if it doesn't exist
-      // This helps with relative paths in GitHub Pages
-      const href = slugExists ? slug : slug
-      
-      return `<a href="${href}">${display}</a>`
+      // Use the same link format as Quartz's internal links
+      // Add the 'internal' class so Quartz's SPA router handles it
+      return `<a href="/${targetSlug}" class="internal">${display}</a>`
     })
   } else if (Array.isArray(value)) {
     return value.map(item => processWikilinks(item, allSlugs))
@@ -150,11 +148,11 @@ export const FrontMatter: QuartzTransformerPlugin<Partial<Options>> = (userOpts)
 
             if (socialImage) data.socialImage = socialImage
 
-            // Remove duplicate slugs BEFORE processing wikilinks
+            // Remove duplicate slugs
             const uniqueSlugs = [...new Set(allSlugs)]
             allSlugs.splice(0, allSlugs.length, ...uniqueSlugs)
 
-            // Process wikilinks in all frontmatter properties with updated allSlugs
+            // Process wikilinks in all frontmatter properties
             for (const key in data) {
               if (key !== 'title' && key !== 'tags' && key !== 'aliases') {
                 data[key] = processWikilinks(data[key], allSlugs)
