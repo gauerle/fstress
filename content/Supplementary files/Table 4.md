@@ -1,0 +1,20 @@
+---
+Title: Weighting methods for aggregation of financial stress indicators
+tags:
+  - suppl
+graph: "false"
+---
+
+| Method                                                 | Description                                                                                             | Implemented in                                                                                                                           |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Static principal component analysis weights            | Extracts principal components to find fixed weights, which remain constant over time                    | [[@oet2015]], [[@huotari2015]], [[@evgenidis2017]], [[@hakkio2009]], [[@illing2006]], [[@mundra2021]], [[@nazlioglu2015]], [[@rooj2025]] |
+| Dynamic principal component analysis weights           | Uses rolling windows to estimate variable weights, as indicators change over time                       | [[@oet2015]], [[@monin2019]], [[@bonato2024]]                                                                                            |
+| Equal market weighting                                 | Assigns equal weights to all indicators                                                                 | [[@oet2015]]                                                                                                                             |
+| Variance-equal weighting                               | Standardizes indicators by their variance, then apply equal weighting                                   | [[@huotari2015]], [[@balakrishnan2009]], [[@cardarelli2011]], [[@illing2006]], [[@mundra2021]], [[@neves2022]], [[@rooj2025]]            |
+| Portfolio theoretic weighting                          | Weight indicators based on their correlation matrix, treating stress like portfolio risk                | [[@hollo2012]], [[@oet2015]], [[@huotari2015]], [[@duprey2017]], [[@fava2024]], [[@mundra2021]]                                          |
+| Credit aggregate-weighting                             | Weights indicators based on importance of their underlying credit markets                               | [[@illing2006]]                                                                                                                          |
+| Dynamic credit weighting                               | Similar to credit aggregate-weighting,  but adjusts weights over time                                   | [[@oet2015]]                                                                                                                             |
+| Sample cumulative distribution function transformation | Transforms each indicator to its percentile rank in the historical distribution before aggregation      | [[@illing2006]]                                                                                                                          |
+| Matrix association indexing                            | Measures the degree of co-movement across all indicators using association matrices                     | [[@chavleishvili2023]], [[@chavleishvili2025]], [[@kremer2021]]                                                                          |
+| Exponentially weighted moving average                  | Applies exponentially declining weights to historical observations, giving more value to recent signals | [[@mundra2021]]                                                                                                                          |
+| Dynamic conditional correlation                        | Models time-varying correlations, capturing how relationships strengthen during stress                  | [[@mundra2021]]                                                                                                                          |
