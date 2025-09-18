@@ -2,6 +2,7 @@
 title: Study characteristics
 tags:
   - suppl
+graph: "false"
 ---
 
 

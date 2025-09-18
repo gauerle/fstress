@@ -2,6 +2,7 @@
 title: Theoretical backgrounds of macrosystemic financial stress
 tags:
   - suppl
+graph: "false"
 ---
 
 | Theory                              | Mechanism                                                                                                                      | Explicitly cited in                                                    |

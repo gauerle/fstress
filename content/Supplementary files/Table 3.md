@@ -2,6 +2,7 @@
 title: Measures and generating processes of FSI indicators
 tags:
   - suppl
+graph: "false"
 ---
 
 | Processes                     | Measures                                                                                                                             |

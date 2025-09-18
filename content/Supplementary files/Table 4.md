@@ -2,6 +2,7 @@
 Title: Weighting methods for aggregation of financial stress indicators
 tags:
   - suppl
+graph: "false"
 ---
 
 | Method                                                 | Description                                                                                             | Implemented in                                                                                                                           |
