@@ -31,6 +31,8 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+Say that 'one potential implication is that households who pay high proportions of their household incomes to meet their housing needs are less likely to have the financial resources needed to enable them to participate fully in the society in which they live. Such households can be defined as being in financial stress.'
+
 Connected to:
 [[@bray2001]]
 %% end summary %%

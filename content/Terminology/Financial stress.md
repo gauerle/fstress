@@ -2,18 +2,6 @@
 tags:
   - term
 ---
-- It's a different concept from [[Macroeconomic financial stress|macroeconomic financial stress]]
-- Prevalence data:
-	- [[@sergeyev2023]]:
-		- 93% of US households have concerns about financial situation
-		- 46.2% of US households don't report financial hardships
-	- [[@fpcanada2025]]:
-		- 42% of Canadians report money as their main cause of stress, from which bill payments/expenses is the main stressor (37%)
-		- 49% of Canadians lose sleep because of financial worries
-		- 55% of Canadians experienced negative impact on their life due to financial stress, with 38% being anxiety/depression/mental health challenges
-	- [[@kaastra2025]]: 64% of ING Netherlands customers report some degree of financial stress, with 14% severely stressed
-	- [[@warren2024]]:
-		- 70% of US households report some degree of financial stress
 ## Definitions
 - Being afraid of being unable to meet one's financial obligations or responsibilities ([[@northern2010]], [[@heckman2014]], [[@falconier2019]])
 - Subjective, unpleasant feeling that one is unable to meet financial demands, afford necessities of life, and have sufficient funds to make ends meet, i.e. having enough income to meet expenses and pay all bills in a particular period ([[@davis2004]], [[@yates2007]], [[@mejiacordova2017]], [[@tito-betancur2021]], [[@rahman2021]])
@@ -58,7 +46,6 @@ tags:
 - Also referred to as financial-related psychological stress or distress when they do not have adequado income, wealth, or debt to afford economic hardship ([[@friedline2021]])
 - Individual's perception of financial inadequacy and her/his financial concerns and worries ([[@wei2024]])
 - Negative emotional responde people experience when their financial situation exposes them to uncertainty and constrains their current and future choices ([[@danahy2024]])
-
 ---
 ## Theoretical frameworks
 - [[Cognitive-transactional stress theory]]:
@@ -127,8 +114,11 @@ tags:
 - [[@bray2001]], [[@digiacomo2020]]: [[ABSFSS]]
 - [[@heo2020]], [[@choi2020]]: [[APRFSS]]
 - [[@mahdzan2019]], [[@rahman2021]]: [[PASTINDX]]
+- [[@tito-betancur2021]]: [[EEF]]
+- [[@heckman2014]]: [[FSS-CV]]
 #### Ad-hoc measures
 - [[@heckman2014]] used 1-item measure: 'I feel stressed about my personal finances in general'
+- [[@baker2019]] assessed financial stress using three statements: general financial stress, stress over monthly expenses, and stress over paying for school.
 - [[@bailey1998]] used the following items:
 	- 'Inadequate income'
 	- 'Disagreements over how to spend money'

@@ -33,7 +33,8 @@ tags:
 %% begin summary %%
 ## Thoughts
 
-*Head empty*
+Based on Cognitive-Transactional Stress Theory and Stress Process Theory, suggests that 'Poverty is an objective assessment of economic stress that takes into account the demands placed on a family's financial resources. Perceived stress, on the other hand, is a subjective measure of economic stress.
+
 %% end summary %%
 
 ---

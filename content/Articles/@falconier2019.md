@@ -33,6 +33,8 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+Citing Northern et al. (2010), says that 'individuals experience financial stress when they are unable or are afraid of being unable to meet their financial responsibilities'.
+
 Connects with:
 [[@northern2010]]
 %% end summary %%

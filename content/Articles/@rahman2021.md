@@ -35,8 +35,12 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+Grounding itself on previous authors (Prawitz et al., 2006; Davis et al., 2004), explains financial stress could be defined as complexity engagement, general financial responsibilities due to lack of money. It is also one’s unpleasing feeling that an individual is incapable of fulfilling financial needs, managing the living requirements and having adequate finances to make ends meet. Stress involves the impressions of frightening, distress and scare, but may also anger and dissatisfaction. It is a point to note that the concept of financial stress and financial distress are not similar. Financial stress is related to the major financial inadequacies to meet up individual financial needs, whereas financial distress is an opposite viewpoint of financial well-being. Financial stress primarily derives from the inadequacy of fund due to personal, family, and shocks in financial situations. The increase of financial stress, such as debt increase or financial shortages, would reasonably intensify the state of financial distress, which lowers the level of financial well-being. One of the key concerns of marginalized community is having a lack of enough finance which put them into financial constrain and economic hardship.
+
 Connects with:
 [[@prawitz2006]]
+[[@davis2004]]
+[[@mahdzan2019]]
 
 %% end summary %%
 

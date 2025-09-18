@@ -1,52 +1,31 @@
 ---
 title: A review of financial stress literature
-graph: "false"
 ---
 > [!example] How to navigate in this website
-> Hey, Altay! Finally, the review is done. I compiled everything into a website to make it more didactic. Sorry to use English. I decided to keep it this way in order to stay consistent to literature and terminologies. 
+> Altay! Finally, the review is done. I compiled everything into a website to make it more didactic. Sorry to use English. I decided to keep it this way in order to stay consistent to literature and terminologies.
 >  
 > This website works just like Wikipedia: 
-> - By clicking over hyperlinked words, you open up their notes to explore the content. I've built some types of notes:
-> 	- Source notes: named after each article first author, they contain the highlights I made while reading them
-> 	- Scale notes: store explanations about an operationalization of a concept
-> 	- Theory notes: concise description of a seminal theoretical framework that was used at least one time to discuss financial stress-related subject
-> 	- Concept notes: these notes condense studies definitions, related theories, measurements, determinants, and outcomes, based on terminology alone
-> 	- Supplementary notes: keep a table, a figure or another type of material
+> - By clicking over hyperlinked words, you open up their notes to explore the content
 > - To go back use the 'Backlinks section' at the right lane of the page or the navigation breadcrumbs over the page title
-> - It's possible to explore the network of notes and concepts by clicking the graph button, inside the 'Graph View' tab, on the right-superior corner. There, you'll see nodes with different colors. They follow the note types: source notes are green, scale notes are blue, theory notes are yellow, concept notes are red, and supplementary notes are white.
+> - It's possible to explore the network of notes and concepts by clicking the graph button, inside the 'Graph View' tab, on the right-superior corner
 >   
-> The last point is this: I planned to write the whole review in this page, but as the content analysis of terminologies is demanding more time than I planned -- yes, I secretly wanted to brought something different to the review -- I decided to simply link here the pages at the proper sequence.
+> The last point is this: I planned to write the whole review in this page, but as the content analysis of terminologies is demanding more time than I planned -- yes, I secretly wanted to brought something different to the review -- I decided to keep it simple and simply link here the pages at the proper sequence.
 
 A proper review of financial stress posits a core problem right at the beginning, which anyone might face, regarding terminology. Such issue may arise specially when considering a long time window which makes possible to examine how vocabulary changed over decades. Also, in order to cover different research questions and conceptualizations, a broad scope of populations and countries were considered. In total, 137 articles were included, totalizing more than 540k participants (apart from big data samples) and over 60 countries. Considering all studies, 17 terms on 'money-related problems' -- a wildcard vocable to represent the broad meaning underlying all terminologies on the agenda -- were defined. Based on a rol of 38 theories, the articles suggested different models and frameworks while validating 19 formal scales, besides a great number of various ad-hoc measures. Detailed results with key findings, scales, and others are presented on [[Table 1]].
 
 The most prevalent design was cross-sectional (n=84, 61.3%). Almost 45% of studies included participants from USA (n=61), followed by Australia (n=9, 6.6%) and Netherlands (n=5, 3.6%). The main unit of analysis was individual adults (n=54, 39.1%), next to countries (n=20, 14.6%) and households (n=14, 10.1%). 2021 was the year with greater number of publication in our sample ([[Figure 1]]). The most cited word on titles was "financial" (n=147), followed by "stress" (n=88) and "health" (n=21).  The bigram "financial stress" was mentioned 74 times, above "financial hardship" (n=12) and "financial strain" (n=10). 
 
-Given the extensive literature on money-related problems many terms emerge with similar meaning, and analogous words have divergent meanings. In fact, 'financial stress' is just one in a myriad of closely related expressions. The lack of unicity, apart from effortful nomological attempts, is a barrier to the establishment of proper interfaces between scientific fields. At least from an ontological perspective, this panorama is shared, from higher to lower-levels of relationships, between economists, anthropologists, sociologists, and psychobiologists. For instance, there was a total of 45 distinct definitions for "financial stress" in our sample; 11 for "financial strain"; 9 for "financial hardship"; and a fluctuating amount for "financial toxicity", "financial threat", "financial scarcity", "financial worry", "financial rumination", "financial distress", "financial deprivation", "financial anxiety", "economic worry", "economic stress", "economic strain", "economic hardship", "economic distress", "economic deprivation", including "economic anxiety".
+---
+# A glossary on money-related problems
+
+Given the extensive literature on money-related problems-- a wildcard vocable to represent the broad meaning underlying all terminologies on the agenda -- many terms emerge with similar meaning, and analogous words have divergent meanings. In fact, 'financial stress' is just one in a myriad of closely related expressions. The lack of unicity, apart from effortful nomological attempts, is a barrier to the establishment of proper interfaces between scientific fields. At least from an ontological perspective, this panorama is shared, from higher to lower-levels of relationships, between economists, anthropologists, sociologists, and psychobiologists. For instance, there was a total of 45 distinct definitions for "financial stress" in our sample; 11 for "financial strain"; 9 for "financial hardship"; and a fluctuating amount for "financial toxicity", "financial threat", "financial scarcity", "financial worry", "financial rumination", "financial distress", "financial deprivation", "financial anxiety", "economic worry", "economic stress", "economic strain", "economic hardship", "economic distress", "economic deprivation", including "economic anxiety".
 
 All of these money-related problems aliases cross-relate with each other not only through bigram combinations, but via similar word-usage in their definitions. Below we discuss how authors ground their object of study and structure their frameworks, while comparing their ideas. At first glance, nevertheless, it's possible to establish a clear division: some authors belong to a macrosystemic field of investigation, the realm of emergent effects on scaled financial trades between economic agents -- companies, societies, states, countries, and blocs. The other niche is occupied by microsystemic studies, in which relationships amidst individuals inside their household is taken into account, as well as the external and internal mechanisms that favors the rise of money-related stress in a person.
 
 ## Microsystemic money-related problems
 
-> [!warning] Please, read this!
-> As I previously said, this section is under construction because of the content analysis, so I'll link you to my concept notes, which I used to brainstorm all articles at once. Another thing I'd like to say: after reading all these articles, while I still don't know what was your theoretical framework for financial stress when following the cohort, I've reached the understanding that a MIMIC model would fit very well this construct.
+### 
 
-Each one of these notes are divided in definition, theoretical frameworks, operationalization, determining factors and outcomes, with effect sizes:
-- [[Financial stress]]
-- [[Financial strain]]
-- [[Financial distress]]
-- [[Financial anxiety]]
-- [[Financial hardship]]
-- [[Financial preoccupation]]
-- [[Financial deprivation]]
-- [[Financial threat]]
-- [[Financial toxicity]]
-- [[Economic stress]]
-- [[Economic strain]]
-- [[Economic worry]]
-- [[Economic distress]]
-- [[Economic hardship]]
-- [[Economic deprivation]]
-- [[Economic anxiety]]
 ## Macrosystemic money-related problems
 
 ### Defining macrosystemic financial stress

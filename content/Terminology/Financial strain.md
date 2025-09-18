@@ -29,8 +29,8 @@ tags:
 ## How it's measured
 
 #### Formal scales
-- [[FSS]]
-- [[FSESM]]
+- [[@aldana1998]]: [[FSS]]
+- [[@krause1998]]: [[FSESM]]
 #### Ad-hoc measures
 - [[@selenko2011]] developed a 6-item scale (rating 1 -> 7 ):
 	- 'My current financial situation is a serious strain'

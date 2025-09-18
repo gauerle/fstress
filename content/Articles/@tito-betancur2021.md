@@ -2,12 +2,12 @@
 title: "Escala de estrés financiero (EFEmp-Cov19): Evidencias iniciales de validez y confiabilidad en pequeños y medianos empresarios peruanos"
 authors: Madona Tito-Betancur, Oscar Mamani-Benito, Renzo Felipe Carranza Esteban, J Franco Rodríguez-Alarcón, Christian R Mejia
 year: 2021
-citekey: tito-betancur2021e
+citekey: tito-betancur2021
 design: cross-sectional
 units:
   - adults
   - enterpreneurs
-samplesize: 278
+samplesize: 275
 countries: Peru
 theories:
 analyses:
@@ -29,6 +29,9 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+Citing Mejia Cordova et al. (2017), explains that financial stress is the subjective and unpleasant sensation one feels when incapable of satisfying economic demands, such as paying outstanding bills, and having enough funds to live on until the end of the month.
+
+Cites:
 [[@mejiacordova2017]]
 
 %% end summary %%

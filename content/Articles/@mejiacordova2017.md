@@ -30,9 +30,12 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+Based on Joo (1998), explains that the satisfaction or unsatisfaction about one's financial situation results in a level of financial stress.
+
 Connects with:
 [[@kim2006]]
 [[@montpetit2015]]
+[[@joo1998]]
 
 %% end summary %%
 

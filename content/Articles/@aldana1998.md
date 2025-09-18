@@ -27,6 +27,10 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+Under Takeuchi et al. (1991) contributions, says that 'financial strain is composed of the cognitive, emotional, and behavioral response to the experience of financial hardship sometimes referred to as economic strain. Financial strain is not dependent on income, but on whether one is able to meet his/her obligations. People often find themselves in financial trouble because they are not able to decipher between physiological and psychological needs.'
+
+
+
 Connects with:
 [[@takeuchi1991]]
 

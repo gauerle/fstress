@@ -31,6 +31,8 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+Citing Aldana (1998), defines financial stress 'not only as an inability to meet one’s economic responsibilities, but also as being influenced by psychological factors such as attitudes, beliefs, and cognitive appraisals of demands and available resources.'
+
 Connects with:
 [[@aldana1998]]
 [[@takeuchi1991]]

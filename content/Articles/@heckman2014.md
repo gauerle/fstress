@@ -34,7 +34,7 @@ tags:
 
 ## Thoughts
 
-Financial stress in psychology can be defined as the inability to meet one's financial obligations [[@northern2010]]
+Financial stress may be defined as the inability to meet one’s financial obligations, but can also include psychological or emotional effects, as per Northern et al. (2010).
 
 Financial stress has negative outcomes: anxiety, depression, poor academic performance, poor health and difficulty persisting towards degree completion.
 

@@ -33,10 +33,17 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+Citing previous literature, explains financial stress is defined as 'financial strains that occur when one is subjected to certain negative events such as changes to current financial position and facing an emergency that require a sum of money beyond the normal capacity of the individual.' They highlight that financial stress is different from 'financial distress, because financial stress relates to major financial shocks or changes in one’s life whereas financial distress is an inverse perspective of financial well-being.'
+
+
 Connects with:
 [[@prawitz2006]]
 [[@starrin2009]]
 [[@voydanoff1990]]
+[[@yates2007]]
+[[@boss2001]]
+[[@grable2011]]
+
 %% end summary %%
 
 ---

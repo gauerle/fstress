@@ -1,13 +1,15 @@
 ---
-title: "The Consequences of Financial Stress for Individuals, Families, and Society"
+title: The Consequences of Financial Stress for Individuals, Families, and Society
 authors: Christopher G. Davis, Janet Mantler
 year: 2004
 citekey: davis2004
 design: ""
 units: ""
-samplesize: 
+samplesize:
 countries: ""
 theories:
+  - "[[Family systems theory]]"
+  - "[[Stress process theory]]"
 analyses: ""
 scales: ""
 hypotheses:
@@ -22,6 +24,10 @@ tags:
 
 %% begin summary %%
 ## Thoughts
+
+Based on Stress Process Theory and Family Systems Theory, defines 'financial stress as the unpleasant feeling that one is unable to meet financial demands, afford the necessities of life, and have sufficient funds to make ends meet. The feeling normally includes the emotions of dread, anxiety, and fear, but may also include anger and frustration.'
+
+And also complements that 'we refer to the objective circumstances that typically give rise to the feeling of financial stress as economic hardship. Economic hardship may be due to such things as the loss of a job, unexpected medical or legal expenses, chronic overspending, investment losses, or gambling.'
 
 Connects with:
 [[@lempers1989]]

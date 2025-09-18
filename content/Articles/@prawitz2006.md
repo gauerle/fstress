@@ -27,8 +27,11 @@ tags:
 %% begin summary %%
 ## Thoughts
 
+
+
 Connects with:
 [[@aldana1998]]
+
 %% end summary %%
 
 ---
