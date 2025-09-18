@@ -7,7 +7,7 @@ countries:
   - USA
 fsiname: KCFSI
 theories:
-  - "[[Knightian uncertainty theory]]"
+  - "[[Knightian Uncertainty Theory]]"
 aggregation:
   - Static principal component analysis weights
 keyfindings:
@@ -24,6 +24,17 @@ tags:
 
 %% begin summary %%
 ## Thoughts
+
+Financial stress occur through disruptions to the normal functioning of financial markets.
+
+Uses Knightian Uncertainty Theory to ground that such uncertainty tends to arise when losses are incurred for the first time on a new financial instrument or practice.
+
+Key indicators: financial volatility, bond market, interest rates, security market. Aggregation methods: static principal component analysis.
+
+Determinants findings:
+- Economic activity: financial stress episode (KCFSI) led to decreased CFNAI (b=-0.15)
+- Credit standards: KCFSI successfully predicted changes in credit standards (b=7.95)
+
 
 Connects with:
 [[@illing2006]]

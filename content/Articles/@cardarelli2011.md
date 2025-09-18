@@ -19,7 +19,7 @@ countries:
   - USA
 fsiname: FSI
 theories:
-  - "[[Financial accelerator theory]]"
+  - "[[Financial Accelerator Theory]]"
 aggregation:
   - Variance-equal weighting
 keyfindings:

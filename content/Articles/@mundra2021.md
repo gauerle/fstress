@@ -6,7 +6,7 @@ citekey: mundra2021
 countries: India
 fsiname: FSI
 theories:
-  - "[[Real option theory]]"
+  - "[[Real Option Theory]]"
 aggregation:
   - Exponentially weighted moving average
   - Variance-equal weighting

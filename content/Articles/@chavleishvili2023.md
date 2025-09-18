@@ -8,7 +8,7 @@ countries:
   - EU
 fsiname: CISS
 theories:
-  - "[[Modern portfolio theory]]"
+  - "[[Modern Portfolio Theory]]"
 aggregation:
   - Matrix association indexing
 keyfindings:

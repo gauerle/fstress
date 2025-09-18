@@ -16,7 +16,7 @@ tags:
 
 %% begin summary %%
 
-## Summary
+## Thoughts
 
 Financial stress doesn't have a common definition, while some authors define it as a materialization of a systemic risk or the product of the interaction between vulnerabilities. The broad definition suggested here is that financial stress is the disruption to the normal functioning of financial markets. It involves at least one of these:
 - Increased asymmetry of information

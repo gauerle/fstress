@@ -107,7 +107,7 @@ tags:
 - [[Self-efficacy theory]]:
 	- [[@lim2014]]: refers to benefits expected from high-levels of self-efficacy, specially on mental and physical health
 	- [[@heckman2014]]: argues that higher financial self-efficacy should elicit positive financial behaviors
-- [[Prospect theory]]:
+- [[Prospect Theory]]:
 	- [[@amonhaemanon2024]]: suggests gamblers have heightened loss aversion as financial stress enters the game
 - [[Social role theory]]:
 	- [[@spoelma2024]]: uses this framework to justify why leaders may suffer financial stress unequally, based on their genders

@@ -7,7 +7,7 @@ countries:
   - USA
 fsiname: OFR-FSI
 theories:
-  - "[[Heterogeneous market hypothesis]]"
+  - "[[Heterogeneous Market Hypothesis]]"
 aggregation:
   - Dynamic principal component analysis weights
 keyfindings:
@@ -24,6 +24,13 @@ tags:
 
 %% begin summary %%
 ## Thoughts
+
+Follows @hakkio2009 definition of financial stress. Suggests a FSI can be estimated by applying the Heterogenous Market Hypothesis, which implies auto-regressing daily volatility at different time resolutions. 
+
+As indicators, uses: financial volatility, credit spreads, equity valuations, and safe assets. Suggests dynamic principal component analysis weights as the ideal aggregation method.
+
+Determinants:
+- Commodities: global financial stress predicted realized volatility of commodities in different forecast horizons (β=0.01)
 
 Connects with:
 [[@hakkio2009]]

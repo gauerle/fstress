@@ -213,6 +213,7 @@ const nodes = [...neighbourhood].map((url) => {
         'scale': '#3B82F6',     
         'theory': '#F59E0B', 
         'term': '#e6287b',
+        'suppl': '#ffffffff',
       }
       
       if (tagColors[firstTag]) {

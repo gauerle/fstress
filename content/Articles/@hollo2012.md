@@ -7,8 +7,8 @@ countries:
   - EU
 fsiname: CISS
 theories:
-  - "[[Modern portfolio theory]]"
-  - "[[Financial accelerator theory]]"
+  - "[[Modern Portfolio Theory]]"
+  - "[[Financial Accelerator Theory]]"
 aggregation:
   - Portfolio theoretic weighting
 keyfindings:

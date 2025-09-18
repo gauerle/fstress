@@ -10,7 +10,7 @@ samplesize: 158
 countries:
   - Italy
 theories:
-  - "[[Prospect theory]]"
+  - "[[Prospect Theory]]"
 analyses: structural equation modeling
 scales: ""
 hypotheses:

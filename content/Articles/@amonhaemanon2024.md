@@ -11,7 +11,7 @@ samplesize: 741
 countries:
   - Thailand
 theories:
-  - "[[Prospect theory]]"
+  - "[[Prospect Theory]]"
 analyses:
   - multiple regression
 scales: ""

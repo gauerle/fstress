@@ -7,7 +7,7 @@ countries:
   - EU
 fsiname: STL-FSI
 theories:
-  - "[[Financial accelerator theory]]"
+  - "[[Financial Accelerator Theory]]"
 aggregation:
   - Static principal component analysis weights
 keyfindings:

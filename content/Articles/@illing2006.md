@@ -25,7 +25,9 @@ tags:
 %% begin summary %%
 ## Thoughts
 
-Connects with:
+Force exerted on economic agents by uncertainty and changing expectations of loss in financial markets and institutions. They extend the definition by suggesting that the stress results in an altered economic behaviors (which can be linked to financial stress) that have adverse effects on the real economy
+
+Suggests indicators for FSI construction: debt market, equity market, banking market, and foreign exchange market. While for aggregation methods, tests and compares: static principal component analysis weights, variance-equal weighting, credit aggregate-weighting, and sample CDF transformation.
 
 %% end summary %%
 
@@ -34,18 +36,8 @@ Connects with:
 ## Annotations
 
 
-
-
-
-
-
 > [!quote]- illing2006 - [p. 243](zotero://open-pdf/library/items/V6K534L7?page=243&annotation=47KMWCZ9)
 > Financial stress is defined as the force exerted on economic agents by uncertainty and changing expectations of loss in financial markets and institutions. Financial stress is a continuum, measured in this paper with an index called the Financial Stress Index (FSI), where extreme values are called financial crises
-
-
-
-
-
 
 
 > [!quote]- illing2006 - [p. 255](zotero://open-pdf/library/items/V6K534L7?page=255&annotation=2UI4ZQAZ)
@@ -53,14 +45,3 @@ Connects with:
 
 
 
-
-
-
-> [!quote]- illing2006 - [p. 255](zotero://open-pdf/library/items/V6K534L7?page=255&annotation=FLWSPPRJ)
-> o
-
-
-
-
-
-%% Import Date: 2025-09-13T19:11:28.546-03:00 %%
